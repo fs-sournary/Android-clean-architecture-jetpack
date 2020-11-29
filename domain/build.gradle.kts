@@ -1,6 +1,6 @@
 plugins {
-    id 'java-library'
-    id 'kotlin'
+    id("java-library")
+    kotlin("jvm")
 }
 
 java {
@@ -10,11 +10,12 @@ java {
 
 dependencies {
 
-    implementation deps.kotlin.stdlib
+    // Kotlin
+    implementation(Lib.KOTLIN_STDLIB)
 
     // Timber
-    implementation deps.timber
+    implementation(Lib.TIMBER)
 
     // Coroutine
-    implementation deps.coroutine.core
+    implementation(Lib.COROUTINES_CORE)
 }

@@ -6,11 +6,17 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.util.AttributeSet
+import android.view.Window
 import android.view.WindowInsets
 import android.widget.FrameLayout
 import androidx.core.content.withStyledAttributes
 import com.andrdoidlifelang.android_clean_architecture_jetpack.R
 
+/**
+ * A custom [FrameLayout] which will draw a divider on the edge of the navigation bar. It provides
+ * the sames functions to [Window.setNavigationBarDividerColor] but it also provides work with
+ * translucent navigation bar colors.
+ */
 class NavigationBarContentFrameLayout @JvmOverloads constructor(
     context: Context,
     attributeSet: AttributeSet? = null,
