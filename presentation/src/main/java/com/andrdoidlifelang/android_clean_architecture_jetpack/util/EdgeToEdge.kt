@@ -19,14 +19,14 @@ object EdgeToEdge {
     fun setupRoot(rootView: View, window: Window) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
             // laid out as if the navigation bar was hidden
-            rootView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+            rootView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
                     // laid out fullscreen, behind navigation bar
                     View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
                     // laid out at the most extreme scenario of any other flags
                     View.SYSTEM_UI_FLAG_LAYOUT_STABLE
         } else {
             // Tell the window that we want to handle/fit any system windows
-            WindowCompat.setDecorFitsSystemWindows(window, false)
+            window.setDecorFitsSystemWindows(false)
         }
     }
 }

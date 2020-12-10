@@ -6,8 +6,11 @@ import androidx.core.view.updatePadding
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.andrdoidlifelang.android_clean_architecture_jetpack.R
 import com.andrdoidlifelang.android_clean_architecture_jetpack.ext.getSystemWindowInsetEdge
+import com.andrdoidlifelang.android_clean_architecture_jetpack.ext.updateTheme
+import com.andrdoidlifelang.android_clean_architecture_jetpack.model.Theme
 import com.andrdoidlifelang.android_clean_architecture_jetpack.util.Constant
 import com.andrdoidlifelang.android_clean_architecture_jetpack.util.EdgeToEdge
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        updateTheme(Theme.LIGHT)
         setContentView(R.layout.activity_main)
         setupWindow()
         setupNavigation()
@@ -56,6 +60,6 @@ class MainActivity : AppCompatActivity() {
             drawer.setDrawerLockMode(lockMode)
         }
         // Drawer
-
+        navigation.setupWithNavController(navController)
     }
 }

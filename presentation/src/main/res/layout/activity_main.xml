@@ -22,13 +22,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:defaultNavHost="true"
-                app:navGraph="@navigation/nav_main" />
+                app:navGraph="@navigation/navigation_main" />
         </FrameLayout>
-    </androidx.drawerlayout.widget.DrawerLayout>
 
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        app:menu=""
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:insetForeground="@android:color/transparent"
+            app:menu="@menu/menu_navigation_drawer" />
+    </androidx.drawerlayout.widget.DrawerLayout>
 </com.andrdoidlifelang.android_clean_architecture_jetpack.widget.NavigationBarContentFrameLayout>

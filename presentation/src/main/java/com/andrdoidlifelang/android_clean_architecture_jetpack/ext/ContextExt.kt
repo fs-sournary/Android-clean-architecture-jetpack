@@ -13,12 +13,13 @@ fun Context.openWebSite(uri: Uri) {
     if (isChromeCustomTabsSupported()) {
         CustomTabsIntent.Builder()
             .setToolbarColor(ContextCompat.getColor(this, R.color.primary))
-            .setSecondaryToolbarColor(ContextCompat.getColor(this, R.col))
+            .setSecondaryToolbarColor(ContextCompat.getColor(this, R.color.secondary))
+            .build()
+            .launchUrl(this, uri)
     } else {
         startActivity(Intent(Intent.ACTION_VIEW, uri))
     }
 }
-
 
 private fun Context.isChromeCustomTabsSupported(): Boolean {
     val serviceIntent = Intent(CustomTabsService.ACTION_CUSTOM_TABS_CONNECTION)

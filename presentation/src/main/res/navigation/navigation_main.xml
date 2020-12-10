@@ -11,6 +11,21 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/schedule_dest"
+        android:name="com.andrdoidlifelang.android_clean_architecture_jetpack.ui.schedule.ScheduleFragment"
+        tools:layout="@layout/fragment_schedule" />
+
+    <fragment
+        android:id="@+id/map_dest"
+        android:name="com.andrdoidlifelang.android_clean_architecture_jetpack.ui.map.MapFragment"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/info_dest"
+        android:name="com.andrdoidlifelang.android_clean_architecture_jetpack.ui.info.InfoFragment"
+        tools:layout="@layout/fragment_info" />
+
+    <fragment
         android:id="@+id/setting_dest"
         android:name="com.andrdoidlifelang.android_clean_architecture_jetpack.ui.setting.SettingFragment"
         tools:layout="@layout/fragment_setting" />

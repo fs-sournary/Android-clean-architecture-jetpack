@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- primary color -->
-    <color name="primary">#FF6200EE</color>
-    <color name="primary_variant">#FF3700B3</color>
+    <color name="primary">#6200EE</color>
+    <color name="primary_variant">#3700B3</color>
     <color name="on_primary">#FFFFFFFF</color>
 
     <!-- Secondary color -->
-    <color name="secondary">#FF03DAC5</color>
-    <color name="secondary_variant">#FF018786</color>
-    <color name="on_secondary">#FF000000</color>
+    <color name="secondary">#03DAC6</color>
+    <color name="secondary_variant">#018786</color>
+    <color name="on_secondary">#FFFFFF</color>
 
     <!-- Scrim color -->
     <color name="system_ui_scrim_light">#B3FFFFFF</color> <!-- 70% white -->
@@ -19,5 +19,7 @@
     <color name="status_bar_scrim">@color/system_ui_scrim_black</color>
     <!-- Use a dark scrim by default since light nav bar is API 27+ -->
     <color name="nav_bar_scrim">@color/system_ui_scrim_black</color>
+
+
 
 </resources>
