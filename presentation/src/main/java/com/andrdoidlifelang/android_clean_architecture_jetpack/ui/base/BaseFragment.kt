@@ -37,7 +37,6 @@ abstract class BaseFragment<Binding : ViewDataBinding, VM : ViewModel> : Fragmen
         binding.apply {
             setVariable(BR.viewModel, viewModel)
             lifecycleOwner = viewLifecycleOwner
-            executePendingBindings()
         }
     }
 }

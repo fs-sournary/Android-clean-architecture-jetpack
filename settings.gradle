@@ -1,4 +1,0 @@
-include ':data'
-include ':domain'
-include ':presentation'
-rootProject.name = "Android-clean-architecture-jetpack"

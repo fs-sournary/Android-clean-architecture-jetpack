@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.andrdoidlifelang.android_clean_architecture_jetpack.model.Theme
 
+/**
+ * Update theme base on user setting.
+ */
 fun AppCompatActivity.updateTheme(theme: Theme) {
     delegate.localNightMode = when (theme) {
         Theme.LIGHT -> AppCompatDelegate.MODE_NIGHT_NO
