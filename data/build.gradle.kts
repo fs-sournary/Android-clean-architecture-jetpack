@@ -6,6 +6,10 @@ plugins {
     id("dagger.hilt.android.plugin")
 }
 
+apply {
+    from("../ktlint.gradle.kts")
+}
+
 android {
     compileSdkVersion(Version.COMPILE_SDK)
     buildToolsVersion(Version.BUILD_TOOL)

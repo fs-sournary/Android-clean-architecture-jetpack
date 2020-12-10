@@ -7,5 +7,4 @@ import androidx.lifecycle.ViewModel
 
 class ScheduleViewModel @ViewModelInject constructor(
     @Assisted private val savedStateHandle: SavedStateHandle
-): ViewModel() {
-}
+) : ViewModel()
