@@ -3,7 +3,7 @@ plugins {
     kotlin("android")
     kotlin("android.extensions")
     kotlin("kapt")
-    id("dagger.hilt.android.plugin")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 apply {
@@ -19,10 +19,10 @@ android {
         versionCode = Version.VERSION_CODE
         versionName = Version.VERSION_NAME
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
     buildTypes {
         getByName("release") {
+            isDebuggable = true
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -34,6 +34,12 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        dataBinding = true
+    }
+    androidExtensions {
+        isExperimental = true
+    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -41,40 +47,44 @@ android {
 
 dependencies {
 
-    implementation(project(Module.DOMAIN))
-
     // Core
-    implementation(Lib.TIMBER)
-
-    // Kotlin
     implementation(Lib.KOTLIN_STDLIB)
+    implementation(Lib.APP_COMPAT)
     implementation(Lib.CORE_KTX)
+    implementation(Lib.TIMBER)
+    implementation(Lib.BROSWER)
 
-    // Room
-    implementation(Lib.ROOM_KTX)
-    kapt(Lib.ROOM_COMPILER)
+    // UI
+    implementation(Lib.CONSTRAINT_LAYOUT)
+    implementation(Lib.SWIPE_REFRESH_LAYOUT)
+    implementation(Lib.MATERIAL)
+
+    // Lifecycle
+    implementation(Lib.LIFECYCLE_EXTENSIONS)
+    implementation(Lib.LIFECYCLE_VIEWMODEL_KTX)
+    implementation(Lib.LIFECYCLE_LIVEDATA_KTX)
+    implementation(Lib.LIFECYCLE_VIEWMODEL_SAVEDSTATE)
+
+    // Navigation
+    implementation(Lib.NAVIGATION_FRAGMENT_KTX)
+    implementation(Lib.NAVIGATION_UI_KTX)
 
     // Paging
     implementation(Lib.PAGING_KTX)
+
+    // Glide
+    implementation(Lib.GLIDE_RUNTIME)
+    kapt(Lib.GLIDE_COMPILER)
 
     // Coroutine
     implementation(Lib.COROUTINES_CORE)
     implementation(Lib.COROUTINES_ANDROID)
 
-    // Retrofit and neet
-    implementation(Lib.OKHTTP_LOGGING_INTERCEPTOR)
-    implementation(Lib.RETROFIT_RUNTIME)
-    implementation(Lib.RETROFIT_GSON)
-
-    // Hilt
-    implementation(Lib.HILT)
-    kapt(Lib.HILT_COMPILER)
-
     // WorkManager
     implementation(Lib.WORK_KTX)
 
-    // Test
-    implementation(Lib.JUNIT)
-    implementation(Lib.EXT_JUNIT)
-    implementation(Lib.ESPRESSO)
+    // Testing
+    testImplementation(Lib.JUNIT)
+    androidTestImplementation(Lib.EXT_JUNIT)
+    androidTestImplementation(Lib.ESPRESSO)
 }

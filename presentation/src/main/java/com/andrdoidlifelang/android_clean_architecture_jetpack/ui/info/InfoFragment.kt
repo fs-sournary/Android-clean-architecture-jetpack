@@ -3,7 +3,7 @@ package com.andrdoidlifelang.android_clean_architecture_jetpack.ui.info
 import androidx.fragment.app.viewModels
 import com.andrdoidlifelang.android_clean_architecture_jetpack.R
 import com.andrdoidlifelang.android_clean_architecture_jetpack.databinding.FragmentInfoBinding
-import com.andrdoidlifelang.android_clean_architecture_jetpack.ui.base.BaseFragment
+import com.androidlifelang.base.ui.BaseFragment
 
 class InfoFragment : BaseFragment<FragmentInfoBinding, InfoViewModel>() {
 

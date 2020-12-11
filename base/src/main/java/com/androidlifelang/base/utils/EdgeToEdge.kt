@@ -1,4 +1,4 @@
-package com.andrdoidlifelang.android_clean_architecture_jetpack.util
+package com.androidlifelang.base.utils
 
 import android.os.Build
 import android.view.View

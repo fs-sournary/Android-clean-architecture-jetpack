@@ -1,4 +1,4 @@
-package com.andrdoidlifelang.android_clean_architecture_jetpack.ext
+package com.androidlifelang.base.ext
 
 import android.graphics.Typeface
 import android.text.Spannable

@@ -7,8 +7,8 @@ import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.viewModels
 import com.andrdoidlifelang.android_clean_architecture_jetpack.R
 import com.andrdoidlifelang.android_clean_architecture_jetpack.databinding.FragmentHomeBinding
-import com.andrdoidlifelang.android_clean_architecture_jetpack.ext.getSystemWindowInsetEdge
-import com.andrdoidlifelang.android_clean_architecture_jetpack.ui.base.BaseFragment
+import com.androidlifelang.base.ext.getSystemWindowInsetEdge
+import com.androidlifelang.base.ui.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

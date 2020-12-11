@@ -1,8 +1,8 @@
-package com.andrdoidlifelang.android_clean_architecture_jetpack.ext
+package com.androidlifelang.base.ext
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.andrdoidlifelang.android_clean_architecture_jetpack.model.Theme
+import com.androidlifelang.base.model.Theme
 
 /**
  * Update theme base on user setting.

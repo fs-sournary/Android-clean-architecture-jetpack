@@ -1,23 +1,29 @@
-package com.andrdoidlifelang.android_clean_architecture_jetpack.ui
+package com.andrdoidlifelang.android_clean_architecture_jetpack.ui.main
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.viewModels
 import androidx.core.view.updatePadding
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.andrdoidlifelang.android_clean_architecture_jetpack.R
-import com.andrdoidlifelang.android_clean_architecture_jetpack.ext.getSystemWindowInsetEdge
-import com.andrdoidlifelang.android_clean_architecture_jetpack.ext.updateTheme
-import com.andrdoidlifelang.android_clean_architecture_jetpack.model.Theme
+import com.andrdoidlifelang.android_clean_architecture_jetpack.databinding.ActivityMainBinding
 import com.andrdoidlifelang.android_clean_architecture_jetpack.util.Constant
-import com.andrdoidlifelang.android_clean_architecture_jetpack.util.EdgeToEdge
+import com.androidlifelang.base.ext.getSystemWindowInsetEdge
+import com.androidlifelang.base.ext.updateTheme
+import com.androidlifelang.base.model.Theme
+import com.androidlifelang.base.ui.BaseActivity
+import com.androidlifelang.base.utils.EdgeToEdge
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
+
+    override val viewModel: MainViewModel by viewModels()
+
+    override val layoutId: Int = R.layout.activity_main
 
     private var currentNavId = Constant.NAV_ID_NONE
 
@@ -27,7 +33,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         updateTheme(Theme.LIGHT)
-        setContentView(R.layout.activity_main)
         setupWindow()
         setupNavigation()
     }

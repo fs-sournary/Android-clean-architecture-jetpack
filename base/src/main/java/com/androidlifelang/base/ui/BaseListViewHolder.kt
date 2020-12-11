@@ -1,4 +1,4 @@
-package com.andrdoidlifelang.android_clean_architecture_jetpack.ui.base
+package com.androidlifelang.base.ui
 
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleOwner

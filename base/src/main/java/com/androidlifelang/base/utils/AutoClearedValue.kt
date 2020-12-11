@@ -1,4 +1,4 @@
-package com.andrdoidlifelang.android_clean_architecture_jetpack.util
+package com.androidlifelang.base.utils
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
