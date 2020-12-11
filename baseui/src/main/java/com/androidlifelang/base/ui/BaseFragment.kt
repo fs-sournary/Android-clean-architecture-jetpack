@@ -1,4 +1,4 @@
-package com.andrdoidlifelang.android_clean_architecture_jetpack.ui.base
+package com.androidlifelang.base.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
-import com.andrdoidlifelang.android_clean_architecture_jetpack.BR
-import com.andrdoidlifelang.android_clean_architecture_jetpack.ext.autoClear
+import com.androidlifelang.base.BR
+import com.androidlifelang.base.ext.autoClear
 
 abstract class BaseFragment<Binding : ViewDataBinding, VM : ViewModel> : Fragment() {
 

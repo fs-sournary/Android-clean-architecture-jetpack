@@ -1,8 +1,8 @@
-package com.andrdoidlifelang.android_clean_architecture_jetpack.ext
+package com.androidlifelang.base.ext
 
 import android.os.Build
 import android.view.WindowInsets
-import com.andrdoidlifelang.android_clean_architecture_jetpack.model.SystemWindowInsetEdge
+import com.androidlifelang.base.model.SystemWindowInsetEdge
 
 /**
  * Get system window (status bar, navigation bar, ime...) insets base on API level.

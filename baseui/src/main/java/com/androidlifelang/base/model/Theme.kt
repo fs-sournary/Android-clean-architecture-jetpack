@@ -1,4 +1,4 @@
-package com.andrdoidlifelang.android_clean_architecture_jetpack.model
+package com.androidlifelang.base.model
 
 enum class Theme(val storageKey: String) {
     LIGHT("light"),

@@ -1,4 +1,4 @@
-package com.andrdoidlifelang.android_clean_architecture_jetpack.ext
+package com.androidlifelang.base.ext
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
