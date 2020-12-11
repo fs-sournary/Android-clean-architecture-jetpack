@@ -49,7 +49,7 @@ android {
 
 dependencies {
 
-    implementation(project(Module.BASE))
+    implementation(project(Module.BASE_UI))
     implementation(project(Module.DOMAIN))
     implementation(project(Module.DATA))
 
