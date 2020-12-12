@@ -3,14 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <variable
-            name="viewModel"
-            type="com.andrdoidlifelang.android_clean_architecture_jetpack.ui.main.MainViewModel" />
-    </data>
-
-    <com.andrdoidlifelang.android_clean_architecture_jetpack.widget.NavigationBarContentFrameLayout
+    <com.andrdoidlifelang.presentation.widget.NavigationBarContentFrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -27,7 +20,7 @@
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/nav_host_fragment"
-                    android:name="com.andrdoidlifelang.android_clean_architecture_jetpack.widget.DispatchInsetsNavHostFragment"
+                    android:name="com.andrdoidlifelang.presentation.widget.DispatchInsetsNavHostFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:defaultNavHost="true"
@@ -42,5 +35,5 @@
                 app:insetForeground="@android:color/transparent"
                 app:menu="@menu/menu_navigation_drawer" />
         </androidx.drawerlayout.widget.DrawerLayout>
-    </com.andrdoidlifelang.android_clean_architecture_jetpack.widget.NavigationBarContentFrameLayout>
+    </com.andrdoidlifelang.presentation.widget.NavigationBarContentFrameLayout>
 </layout>

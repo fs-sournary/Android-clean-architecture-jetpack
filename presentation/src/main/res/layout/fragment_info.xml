@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="com.andrdoidlifelang.android_clean_architecture_jetpack.ui.info.InfoViewModel" />
+            type="com.andrdoidlifelang.presentation.ui.info.InfoViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

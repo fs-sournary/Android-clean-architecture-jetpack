@@ -15,7 +15,7 @@ android {
     compileSdkVersion(Version.COMPILE_SDK)
     buildToolsVersion(Version.BUILD_TOOL)
     defaultConfig {
-        applicationId = "com.andrdoidlifelang.android_clean_architecture_jetpack"
+        applicationId = "com.andrdoidlifelang.presentation"
         minSdkVersion(Version.MIN_SDK)
         targetSdkVersion(Version.TARGET_SDK)
         versionCode = Version.VERSION_CODE
@@ -49,7 +49,7 @@ android {
 
 dependencies {
 
-    implementation(project(Module.BASE_UI))
+    implementation(project(Module.CORE_PRESENTATION))
     implementation(project(Module.DOMAIN))
     implementation(project(Module.DATA))
 
