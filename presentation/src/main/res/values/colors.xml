@@ -19,7 +19,4 @@
     <color name="status_bar_scrim">@color/system_ui_scrim_black</color>
     <!-- Use a dark scrim by default since light nav bar is API 27+ -->
     <color name="nav_bar_scrim">@color/system_ui_scrim_black</color>
-
-
-
 </resources>

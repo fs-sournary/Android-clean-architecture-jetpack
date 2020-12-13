@@ -5,16 +5,16 @@
 
         <variable
             name="viewModel"
-            type="com.androidlifelang.base.ui.BaseViewModel" />
+            type="com.androidlifelang.corepresentation.ui.BaseViewModel" />
 
         <variable
             name="item"
-            type="com.androidlifelang.base.model.UiItem" />
+            type="com.androidlifelang.corepresentation.model.UiItem" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

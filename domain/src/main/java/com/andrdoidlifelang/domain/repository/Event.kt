@@ -1,7 +1,8 @@
 package com.andrdoidlifelang.domain.repository
 
 /**
- * The wrapper is used for event properties that is exposed via LiveData such as show toast, show dialog, navigation...
+ * The wrapper is used for event properties that is exposed via LiveData such as show toast,
+ * show dialog, navigation...
  */
 open class Event<out T>(private val content: T) {
 

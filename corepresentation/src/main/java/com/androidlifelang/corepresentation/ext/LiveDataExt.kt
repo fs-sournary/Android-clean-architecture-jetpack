@@ -1,4 +1,4 @@
-package com.androidlifelang.base.ext
+package com.androidlifelang.corepresentation.ext
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData

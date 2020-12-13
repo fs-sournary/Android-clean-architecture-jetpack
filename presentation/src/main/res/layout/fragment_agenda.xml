@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.andrdoidlifelang.presentation.ui.home.HomeViewModel" />
+            type="com.andrdoidlifelang.presentation.ui.agenda.AgendaViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,11 +27,10 @@
             style="@style/Widget.AndroidACleanArchitectureJetpack.AppBar"
             android:layout_width="0dp"
             android:layout_height="?attr/actionBarSize"
-            app:contentInsetStartWithNavigation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/status_bar"
             app:navigationIcon="@drawable/ic_menu"
-            app:title="@string/home_title" />
+            app:title="@string/agenda_title" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

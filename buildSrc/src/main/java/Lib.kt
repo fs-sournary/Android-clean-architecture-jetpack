@@ -9,7 +9,7 @@ object Lib {
     const val ARCH_CORE_RUNTIME = "androidx.arch.core:core-runtime:${Version.ARCH_CORE}"
     const val ARCH_CORE_TESTING = "androidx.arch.core:core-testing:${Version.ARCH_CORE}"
     const val CORE_KTX = "androidx.core:core-ktx:${Version.CORE_KTX}"
-    const val BROSWER = "androidx.browser:browser:${Version.BROSWER}"
+    const val BROWSER = "androidx.browser:browser:${Version.BROWSER}"
     const val TIMBER = "com.jakewharton.timber:timber:${Version.TIMBER}"
     const val TRANSITION = "androidx.transition:transition:${Version.TRANSITION}"
 

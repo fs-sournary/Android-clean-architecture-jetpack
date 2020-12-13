@@ -1,4 +1,4 @@
-package com.androidlifelang.base.ui
+package com.androidlifelang.corepresentation.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
-import com.androidlifelang.base.BR
-import com.androidlifelang.base.ext.autoClear
+import com.androidlifelang.corepresentation.BR
+import com.androidlifelang.corepresentation.ext.autoClear
 
 abstract class BaseFragment<Binding : ViewDataBinding, VM : ViewModel> : Fragment() {
 

@@ -16,6 +16,11 @@
         tools:layout="@layout/fragment_schedule" />
 
     <fragment
+        android:id="@+id/agenda_dest"
+        android:name="com.andrdoidlifelang.presentation.ui.agenda.AgendaFragment"
+        tools:layout="@layout/fragment_agenda" />
+
+    <fragment
         android:id="@+id/map_dest"
         android:name="com.andrdoidlifelang.presentation.ui.map.MapFragment"
         tools:layout="@layout/fragment_map" />

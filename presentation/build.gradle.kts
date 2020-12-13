@@ -60,7 +60,7 @@ dependencies {
     implementation(Lib.APP_COMPAT)
     implementation(Lib.CORE_KTX)
     implementation(Lib.TIMBER)
-    implementation(Lib.BROSWER)
+    implementation(Lib.BROWSER)
 
     // UI
     implementation(Lib.CONSTRAINT_LAYOUT)
@@ -96,9 +96,4 @@ dependencies {
     kapt(Lib.HILT_COMPILER)
     implementation(Lib.HILT_ANDROID_VIEWMODEL)
     kapt(Lib.HILT_ANDROID_COMPILER)
-
-    // Testing
-    testImplementation(Lib.JUNIT)
-    androidTestImplementation(Lib.EXT_JUNIT)
-    androidTestImplementation(Lib.ESPRESSO)
 }

@@ -23,13 +23,13 @@ class NavigationBarContentFrameLayout @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : FrameLayout(context, attributeSet, defStyleAttr) {
 
-    var navigationBarDividerColor: Int = 0
+    private var navigationBarDividerColor: Int = 0
         set(value) {
             field = value
             dividerDrawable.color = value
         }
 
-    var navigationBarDividerSize: Int = 0
+    private var navigationBarDividerSize: Int = 0
         set(value) {
             field = value
             updateDividerBounds()

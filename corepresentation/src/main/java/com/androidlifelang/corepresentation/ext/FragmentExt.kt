@@ -1,7 +1,7 @@
-package com.androidlifelang.base.ext
+package com.androidlifelang.corepresentation.ext
 
 import androidx.fragment.app.Fragment
-import com.androidlifelang.base.utils.AutoClearedValue
+import com.androidlifelang.corepresentation.utils.AutoClearedValue
 
 /**
  * Create a wrapper for properties that will be clear when its fragment' View is destroyed.

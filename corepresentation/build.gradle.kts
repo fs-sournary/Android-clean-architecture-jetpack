@@ -52,7 +52,7 @@ dependencies {
     implementation(Lib.APP_COMPAT)
     implementation(Lib.CORE_KTX)
     implementation(Lib.TIMBER)
-    implementation(Lib.BROSWER)
+    implementation(Lib.BROWSER)
 
     // UI
     implementation(Lib.CONSTRAINT_LAYOUT)

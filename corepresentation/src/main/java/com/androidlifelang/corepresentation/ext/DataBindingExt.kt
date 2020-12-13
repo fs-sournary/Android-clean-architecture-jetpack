@@ -1,4 +1,4 @@
-package com.androidlifelang.base.ext
+package com.androidlifelang.corepresentation.ext
 
 import android.graphics.drawable.Drawable
 import android.net.Uri

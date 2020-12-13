@@ -6,7 +6,7 @@ object Version {
     const val APP_COMPAT = "1.2.0"
     const val ARCH_CORE = "2.1.0"
     const val CORE_KTX = "1.5.0-alpha05"
-    const val BROSWER = "1.2.0"
+    const val BROWSER = "1.2.0"
     const val TIMBER = "4.7.1"
     const val TRANSITION = "1.3.1"
     const val SWIPE_REFRESH_LAYOUT = "1.1.0"
