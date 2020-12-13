@@ -6,4 +6,8 @@
         <attr name="navigationBarBorderSize" format="color" />
     </declare-styleable>
 
+    <declare-styleable name="MovieHashTagItemDecoration">
+        <attr name="android:drawable" />
+        <attr name="margin" format="dimension" />
+    </declare-styleable>
 </resources>

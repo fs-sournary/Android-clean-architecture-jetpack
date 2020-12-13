@@ -1,4 +1,4 @@
-package com.androidlifelang.base.model
+package com.androidlifelang.corepresentation.model
 
 enum class Theme(val storageKey: String) {
     LIGHT("light"),

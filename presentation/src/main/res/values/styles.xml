@@ -5,4 +5,9 @@
         <item name="android:background">?attr/colorSurface</item>
         <item name="android:elevation">8dp</item>
     </style>
+
+    <style name="Widget.AndroidACleanArchitectureJetpack.MovieHashTagItemDecoration" parent="">
+        <item name="android:drawable">@drawable/ic_movie_camera</item>
+        <item name="margin">24dp</item>
+    </style>
 </resources>

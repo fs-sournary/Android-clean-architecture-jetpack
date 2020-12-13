@@ -1,4 +1,4 @@
-package com.androidlifelang.base.utils
+package com.androidlifelang.corepresentation.utils
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle

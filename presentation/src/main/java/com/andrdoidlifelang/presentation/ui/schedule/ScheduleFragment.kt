@@ -3,9 +3,11 @@ package com.andrdoidlifelang.presentation.ui.schedule
 import androidx.fragment.app.viewModels
 import com.andrdoidlifelang.presentation.R
 import com.andrdoidlifelang.presentation.databinding.FragmentScheduleBinding
-import com.androidlifelang.base.ui.BaseFragment
+import com.andrdoidlifelang.presentation.ui.base.MainNavigationFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-class ScheduleFragment : BaseFragment<FragmentScheduleBinding, ScheduleViewModel>() {
+@AndroidEntryPoint
+class ScheduleFragment : MainNavigationFragment<FragmentScheduleBinding, ScheduleViewModel>() {
 
     override val viewModel by viewModels<ScheduleViewModel>()
 

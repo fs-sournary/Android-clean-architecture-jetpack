@@ -4,10 +4,26 @@
     <!-- Main Activity -->
     <string name="main_home_menu_title">Home</string>
     <string name="main_schedule_menu_title">Schedule</string>
+    <string name="main_agenda_menu_title">Agenda</string>
     <string name="main_map_menu_title">Map</string>
     <string name="main_info_menu_title">Info</string>
     <string name="main_setting_menu_title">Setting</string>
 
     <!-- Home fragment -->
     <string name="home_title">Home</string>
+
+    <!-- Schedule fragment -->
+    <string name="schedule_title">Schedule</string>
+
+    <!-- Agenda fragment -->
+    <string name="agenda_title">Agenda</string>
+
+    <!-- Map fragment -->
+    <string name="map_title">Map</string>
+
+    <!-- Info fragment -->
+    <string name="info_title">Information</string>
+
+    <!-- Setting fragment -->
+    <string name="setting_title">Setting</string>
 </resources>

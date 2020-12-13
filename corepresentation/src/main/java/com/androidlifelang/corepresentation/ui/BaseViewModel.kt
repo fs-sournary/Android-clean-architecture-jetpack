@@ -1,4 +1,4 @@
-package com.androidlifelang.base.ui
+package com.androidlifelang.corepresentation.ui
 
 import androidx.lifecycle.ViewModel
 

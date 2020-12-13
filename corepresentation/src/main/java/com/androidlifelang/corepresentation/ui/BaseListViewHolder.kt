@@ -1,8 +1,9 @@
-package com.androidlifelang.base.ui
+package com.androidlifelang.corepresentation.ui
 
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
+import com.androidlifelang.corepresentation.BR
 
 /**
  * The [RecyclerView.ViewHolder]'s base class that uses data binding to bind data into item View.
@@ -13,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
  * @param binding the binding that is generated from item View.
  * @param lifecycleOwner the lifecycle owner of binding such as ViewLifecycleOwner of a Fragment.
  */
-open class BaseListViewHolder<T, ViewBinding : ViewDataBinding>(
+open class ListViewHolder<T, ViewBinding : ViewDataBinding>(
     private val binding: ViewBinding,
     private val lifecycleOwner: LifecycleOwner
 ) : RecyclerView.ViewHolder(binding.root) {
@@ -21,7 +22,8 @@ open class BaseListViewHolder<T, ViewBinding : ViewDataBinding>(
     fun bindData(item: T) {
         binding.apply {
             bind(binding, item, bindingAdapterPosition)
-            lifecycleOwner = this@BaseListViewHolder.lifecycleOwner
+            setVariable(BR.item, item)
+            lifecycleOwner = this@ListViewHolder.lifecycleOwner
             executePendingBindings()
         }
     }

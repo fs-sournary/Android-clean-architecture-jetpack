@@ -1,4 +1,4 @@
-package com.androidlifelang.base.utils
+package com.androidlifelang.corepresentation.utils
 
 import android.os.Build
 import android.view.View

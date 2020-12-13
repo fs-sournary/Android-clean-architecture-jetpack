@@ -18,6 +18,12 @@
             android:title="@string/main_schedule_menu_title" />
 
         <item
+            android:id="@+id/agenda_dest"
+            android:contentDescription="@string/main_agenda_menu_title"
+            android:icon="@drawable/ic_agenda"
+            android:title="@string/main_agenda_menu_title" />
+
+        <item
             android:id="@+id/map_dest"
             android:contentDescription="@string/main_map_menu_title"
             android:icon="@drawable/ic_nav_map"

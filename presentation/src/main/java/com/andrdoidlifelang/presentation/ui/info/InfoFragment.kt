@@ -3,9 +3,11 @@ package com.andrdoidlifelang.presentation.ui.info
 import androidx.fragment.app.viewModels
 import com.andrdoidlifelang.presentation.R
 import com.andrdoidlifelang.presentation.databinding.FragmentInfoBinding
-import com.androidlifelang.base.ui.BaseFragment
+import com.andrdoidlifelang.presentation.ui.base.MainNavigationFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-class InfoFragment : BaseFragment<FragmentInfoBinding, InfoViewModel>() {
+@AndroidEntryPoint
+class InfoFragment : MainNavigationFragment<FragmentInfoBinding, InfoViewModel>() {
 
     override val viewModel by viewModels<InfoViewModel>()
 

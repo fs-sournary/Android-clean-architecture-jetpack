@@ -1,8 +1,8 @@
-package com.androidlifelang.base.ext
+package com.androidlifelang.corepresentation.ext
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.androidlifelang.base.model.Theme
+import com.androidlifelang.corepresentation.model.Theme
 
 /**
  * Update theme base on user setting.
