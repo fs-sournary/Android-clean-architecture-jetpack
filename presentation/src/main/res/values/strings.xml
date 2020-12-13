@@ -26,4 +26,12 @@
 
     <!-- Setting fragment -->
     <string name="setting_title">Setting</string>
+
+    <!-- Sign in dialog -->
+    <string name="sign_in_welcome_message">Welcome</string>
+    <string name="sign_in_manage_google_account_action">Manage your Google account</string>
+    <string name="sign_in_add_account_action">Add another account</string>
+    <string name="sign_in_manage_account_on_device_action">Manage accounts on this device</string>
+    <string name="sign_in_privacy_policy">Privacy Policy</string>
+    <string name="sign_in_term_of_service">Terms of Service</string>
 </resources>

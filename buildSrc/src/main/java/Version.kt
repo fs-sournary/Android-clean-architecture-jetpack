@@ -28,6 +28,11 @@ object Version {
     const val EXT_JUNIT = "1.1.2"
     const val ESPRESSO = "3.3.0"
 
+    // Firebase
+    const val GOOGLE_SERVICE = "4.3.4"
+    const val FIREBASE_CRASHLYTICS_GRADLE = "2.4.1"
+    const val FIREBASE_BOM = "26.1.1"
+
     const val MIN_SDK = 21
     const val TARGET_SDK = 30
     const val COMPILE_SDK = 30

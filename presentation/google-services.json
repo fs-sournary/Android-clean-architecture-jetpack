@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "217338874731",
+    "project_id": "android-clean-jetpack",
+    "storage_bucket": "android-clean-jetpack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217338874731:android:1697bd71e05816a0835a2e",
+        "android_client_info": {
+          "package_name": "com.andrdoidlifelang.androidcleanarchitecturejetpack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217338874731-vlgtvr13ptknoep3ecuv69cl1jr5jnfp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh0kTNspfP09MxdFb37flWQGl_JDP1tDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217338874731-vlgtvr13ptknoep3ecuv69cl1jr5jnfp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

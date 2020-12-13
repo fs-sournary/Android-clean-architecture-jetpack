@@ -19,6 +19,8 @@
 
         <!-- Widgets-->
         <item name="toolbarStyle">@style/Widget.AndroidACleanArchitectureJetpack.Toolbar</item>
+
+        <item name="android:fontFamily">@font/google_sans_medium</item>
     </style>
 
     <style name="AppTheme" parent="Base.Theme" />
