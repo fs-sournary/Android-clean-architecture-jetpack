@@ -78,6 +78,15 @@ object Lib {
     const val GLIDE_RUNTIME = "com.github.bumptech.glide:glide:${Version.GLIDE}"
     const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:${Version.GLIDE}"
 
+    // Firebase
+    const val GOOGLE_SERVICE = "com.google.gms:google-services:${Version.GOOGLE_SERVICE}"
+    const val FIREBASE_CRASHLYTICS_GRADLE =
+        "com.google.firebase:firebase-crashlytics-gradle:${Version.FIREBASE_CRASHLYTICS_GRADLE}"
+    const val FIREBASE_BOM = "com.google.firebase:firebase-bom:${Version.FIREBASE_BOM}"
+    const val FIREBASE_ANALYTICS_KTX = "com.google.firebase:firebase-analytics-ktx"
+    const val FIREBASE_CRASHLYTICS_KTX = "com.google.firebase:firebase-crashlytics-ktx"
+    const val FIREBASE_AUTH = "com.google.firebase:firebase-auth-ktx"
+
     // Testing
     const val JUNIT = "junit:junit:${Version.JUNIT}"
     const val EXT_JUNIT = "androidx.test.ext:junit:${Version.EXT_JUNIT}"

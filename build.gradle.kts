@@ -4,7 +4,6 @@ buildscript {
         google()
         mavenCentral()
         jcenter()
-        maven { url = uri("https://maven.fabric.io/public") }
     }
     dependencies {
         classpath(Lib.ANDROID_GRADLE_PLUGIN)
@@ -12,6 +11,8 @@ buildscript {
         classpath(Lib.KOTLIN_ALLOPEN)
         classpath(Lib.NAVIGATION_SAFE_ARGS)
         classpath(Lib.HILT_GRADLE_PLUGIN)
+        classpath(Lib.GOOGLE_SERVICE)
+        classpath(Lib.FIREBASE_CRASHLYTICS_GRADLE)
     }
 }
 
@@ -20,7 +21,6 @@ allprojects {
         google()
         mavenCentral()
         jcenter()
-        maven { url = uri("https://maven.fabric.io/public") }
     }
 }
 

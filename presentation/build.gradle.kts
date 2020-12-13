@@ -5,6 +5,8 @@ plugins {
     kotlin("kapt")
     id("androidx.navigation.safeargs.kotlin")
     id("dagger.hilt.android.plugin")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 apply {
@@ -15,7 +17,7 @@ android {
     compileSdkVersion(Version.COMPILE_SDK)
     buildToolsVersion(Version.BUILD_TOOL)
     defaultConfig {
-        applicationId = "com.andrdoidlifelang.presentation"
+        applicationId = "com.andrdoidlifelang.androidcleanarchitecturejetpack"
         minSdkVersion(Version.MIN_SDK)
         targetSdkVersion(Version.TARGET_SDK)
         versionCode = Version.VERSION_CODE
@@ -96,4 +98,15 @@ dependencies {
     kapt(Lib.HILT_COMPILER)
     implementation(Lib.HILT_ANDROID_VIEWMODEL)
     kapt(Lib.HILT_ANDROID_COMPILER)
+
+    // Firebase
+    implementation(platform(Lib.FIREBASE_BOM))
+    implementation(Lib.FIREBASE_ANALYTICS_KTX)
+    implementation(Lib.FIREBASE_CRASHLYTICS_KTX)
+    implementation(Lib.FIREBASE_AUTH)
+
+    // Testing
+    testImplementation(Lib.JUNIT)
+    androidTestImplementation(Lib.EXT_JUNIT)
+    androidTestImplementation(Lib.ESPRESSO)
 }
