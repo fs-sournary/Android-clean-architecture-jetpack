@@ -2,6 +2,8 @@ package com.andrdoidlifelang.data.di
 
 import android.content.Context
 import androidx.room.Room
+import com.andrdoidlifelang.data.analytics.AnalyticsHelper
+import com.andrdoidlifelang.data.analytics.FirebaseAnalyticsHelper
 import com.andrdoidlifelang.data.db.MovieDatabase
 import com.andrdoidlifelang.data.db.VideoDao
 import com.andrdoidlifelang.data.pref.AppPreference
@@ -20,7 +22,8 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideAppPreference(@ApplicationContext context: Context): AppPreference = AppPreferenceImpl(context)
+    fun provideAppPreference(@ApplicationContext context: Context): AppPreference =
+        AppPreferenceImpl(context)
 
     @Singleton
     @Provides
@@ -30,4 +33,8 @@ object AppModule {
     @Provides
     fun provideMovieDatabase(@ApplicationContext context: Context): MovieDatabase =
         Room.databaseBuilder(context, MovieDatabase::class.java, Constant.MOVIE_DB_NAME).build()
+
+    @Singleton
+    @Provides
+    fun provideAnalyticsHelper(): AnalyticsHelper = FirebaseAnalyticsHelper()
 }

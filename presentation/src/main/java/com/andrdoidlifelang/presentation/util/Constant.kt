@@ -17,4 +17,13 @@ object Constant {
         R.id.info_dest,
         R.id.setting_dest
     )
+
+    // Analytics
+    const val ANALYTICS_HOME_SCREEN_NAME = "home"
+    const val ANALYTICS_SCHEDULE_SCREEN_NAME = "schedule"
+    const val ANALYTICS_AGENDA_SCREEN_NAME = "agenda"
+    const val ANALYTICS_MAP_SCREEN_NAME = "map"
+    const val ANALYTICS_INFO_SCREEN_NAME = "info"
+    const val ANALYTICS_SETTING_SCREEN_NAME = "setting"
+    const val ANALYTICS_SIGN_IN_DIALOG_NAME = "sign_in"
 }

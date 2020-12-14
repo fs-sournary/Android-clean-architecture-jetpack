@@ -14,7 +14,7 @@ import com.androidlifelang.corepresentation.BR
  * @param binding the binding that is generated from item View.
  * @param lifecycleOwner the lifecycle owner of binding such as ViewLifecycleOwner of a Fragment.
  */
-open class ListViewHolder<T, ViewBinding : ViewDataBinding>(
+open class CoreListViewHolder<T, ViewBinding : ViewDataBinding>(
     private val binding: ViewBinding,
     private val lifecycleOwner: LifecycleOwner
 ) : RecyclerView.ViewHolder(binding.root) {
@@ -23,7 +23,7 @@ open class ListViewHolder<T, ViewBinding : ViewDataBinding>(
         binding.apply {
             bind(binding, item, bindingAdapterPosition)
             setVariable(BR.item, item)
-            lifecycleOwner = this@ListViewHolder.lifecycleOwner
+            lifecycleOwner = this@CoreListViewHolder.lifecycleOwner
             executePendingBindings()
         }
     }

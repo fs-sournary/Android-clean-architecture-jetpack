@@ -35,7 +35,10 @@ object ApiManager {
     }
 
     private fun getLogInterceptor(): Interceptor {
-        val logLevel = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE
+        val logLevel = when (BuildConfig.DEBUG) {
+            true -> HttpLoggingInterceptor.Level.BODY
+            else -> HttpLoggingInterceptor.Level.NONE
+        }
         return HttpLoggingInterceptor().apply { level = logLevel }
     }
 }
