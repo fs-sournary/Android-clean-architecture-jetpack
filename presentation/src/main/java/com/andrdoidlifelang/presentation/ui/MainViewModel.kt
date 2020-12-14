@@ -1,5 +1,5 @@
 package com.andrdoidlifelang.presentation.ui
 
-import com.androidlifelang.corepresentation.ui.BaseViewModel
+import androidx.lifecycle.ViewModel
 
-class MainViewModel : BaseViewModel()
+class MainViewModel : ViewModel()

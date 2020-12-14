@@ -23,12 +23,12 @@ import com.androidlifelang.corepresentation.ext.requestInsetsWhenAttached
 import com.androidlifelang.corepresentation.ext.shouldCloseFromBackPress
 import com.androidlifelang.corepresentation.ext.updateTheme
 import com.androidlifelang.corepresentation.model.Theme
-import com.androidlifelang.corepresentation.ui.BaseActivity
+import com.androidlifelang.corepresentation.ui.CoreActivity
 import com.androidlifelang.corepresentation.utils.EdgeToEdge
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(), NavigationHostListener {
+class MainActivity : CoreActivity<ActivityMainBinding, MainViewModel>(), NavigationHostListener {
 
     private var currentNavId = Constant.NAV_ID_NONE
 

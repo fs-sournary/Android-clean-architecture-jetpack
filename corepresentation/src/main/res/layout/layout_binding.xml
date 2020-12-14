@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="com.androidlifelang.corepresentation.ui.BaseViewModel" />
+            type="androidx.lifecycle.ViewModel" />
 
         <variable
             name="item"

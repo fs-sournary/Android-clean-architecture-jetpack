@@ -61,7 +61,7 @@ dependencies {
     implementation(Lib.COROUTINES_CORE)
     implementation(Lib.COROUTINES_ANDROID)
 
-    // Retrofit and neet
+    // Retrofit and net
     implementation(Lib.OKHTTP_LOGGING_INTERCEPTOR)
     implementation(Lib.RETROFIT_RUNTIME)
     implementation(Lib.RETROFIT_GSON)
@@ -72,6 +72,12 @@ dependencies {
 
     // WorkManager
     implementation(Lib.WORK_KTX)
+
+    // Firebase
+    implementation(platform(Lib.FIREBASE_BOM))
+    implementation(Lib.FIREBASE_ANALYTICS_KTX)
+    implementation(Lib.FIREBASE_CRASHLYTICS_KTX)
+    implementation(Lib.FIREBASE_AUTH)
 
     // Test
     implementation(Lib.JUNIT)

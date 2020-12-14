@@ -15,4 +15,10 @@ object Constant {
 
     // Database
     const val MOVIE_DB_NAME = "movie.db"
+
+    // Analytics
+    const val ANALYTICS_UI_EVENT_CONTENT_TYPE = "ui event"
+    const val ANALYTICS_UI_ACTION_PARAM = "ui_action"
+    const val ANALYTICS_USER_SIGNED_IN_PROPERTY = "user_signed_in"
+    const val ANALYTICS_USER_REGISTERED_PROPERTY = "user_registered"
 }

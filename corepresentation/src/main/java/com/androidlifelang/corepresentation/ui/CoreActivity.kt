@@ -5,12 +5,13 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import androidx.lifecycle.ViewModel
 
-abstract class BaseActivity<ViewBinding : ViewDataBinding, ViewModel : BaseViewModel> : AppCompatActivity() {
+abstract class CoreActivity<ViewBinding : ViewDataBinding, VM : ViewModel> : AppCompatActivity() {
 
     lateinit var binding: ViewBinding
 
-    abstract val viewModel: ViewModel
+    abstract val viewModel: VM
 
     @get:LayoutRes
     abstract val layoutId: Int
