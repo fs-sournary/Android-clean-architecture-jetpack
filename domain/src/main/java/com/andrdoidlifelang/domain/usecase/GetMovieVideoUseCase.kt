@@ -2,10 +2,12 @@ package com.andrdoidlifelang.domain.usecase
 
 import com.andrdoidlifelang.domain.model.Video
 import com.andrdoidlifelang.domain.repository.MovieRepository
-import com.andrdoidlifelang.domain.repository.RepoResult
+import com.andrdoidlifelang.domain.repository.UseCaseResult
 import kotlinx.coroutines.flow.Flow
 
-class GetMovieVideoUseCase(private val movieRepository: MovieRepository) {
+class GetMovieVideoUseCase(
+    private val movieRepository: MovieRepository
+) : BaseFlowUseCase<Int, List<Video>>() {
 
-    fun getUseCaseFlow(movieId: Int): Flow<RepoResult<List<Video>>> = movieRepository.getVideos(movieId)
+    override fun execute(params: Int): Flow<UseCaseResult<List<Video>>> = movieRepository.getVideos(params)
 }
