@@ -7,12 +7,13 @@ import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDialogFragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.observe
 import com.andrdoidlifelang.presentation.R
+import com.andrdoidlifelang.presentation.analytics.AnalyticsHelper
+import com.andrdoidlifelang.presentation.ext.autoClear
 import com.andrdoidlifelang.presentation.model.ThemeHolderUi
-import com.andrdoidlifelang.presentation.util.Constant
-import com.andrdoidlifelang.presentation.util.analytics.AnalyticsHelper
-import com.androidlifelang.corepresentation.ext.autoClear
-import com.androidlifelang.corepresentation.model.ThemeUi
+import com.andrdoidlifelang.presentation.model.ThemeUi
+import com.andrdoidlifelang.presentation.util.Constant.ANALYTICS_SETTING_THEME_SCREEN_NAME
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -23,9 +24,11 @@ class SettingThemeFragment : AppCompatDialogFragment() {
     @Inject
     lateinit var analyticsHelper: AnalyticsHelper
 
-    private val viewModel: SettingThemeViewModel by viewModels()
-    private val screenName = Constant.ANALYTICS_SETTING_THEME_SCREEN_NAME
     private var listAdapter by autoClear<ArrayAdapter<ThemeHolderUi>>()
+
+    private val viewModel: SettingThemeViewModel by viewModels()
+
+    private val screenName = ANALYTICS_SETTING_THEME_SCREEN_NAME
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +44,8 @@ class SettingThemeFragment : AppCompatDialogFragment() {
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        listAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_single_choice)
+        listAdapter =
+            ArrayAdapter(requireContext(), android.R.layout.simple_list_item_single_choice)
 
         return MaterialAlertDialogBuilder(context ?: requireContext())
             .setTitle(R.string.setting_theme_title)

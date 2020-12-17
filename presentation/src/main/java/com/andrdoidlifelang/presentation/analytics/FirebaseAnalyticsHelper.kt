@@ -1,0 +1,39 @@
+package com.andrdoidlifelang.presentation.analytics
+
+import android.app.Activity
+import com.andrdoidlifelang.data.util.Constant.ANALYTICS_UI_ACTION_PARAM
+import com.andrdoidlifelang.data.util.Constant.ANALYTICS_UI_EVENT_CONTENT_TYPE
+import com.andrdoidlifelang.data.util.Constant.ANALYTICS_USER_REGISTERED_PROPERTY
+import com.andrdoidlifelang.data.util.Constant.ANALYTICS_USER_SIGNED_IN_PROPERTY
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.analytics.ktx.logEvent
+import com.google.firebase.ktx.Firebase
+
+class FirebaseAnalyticsHelper : AnalyticsHelper {
+
+    private val firebaseAnalytics = Firebase.analytics
+
+    override fun sendScreenView(screenName: String, activity: Activity) {
+        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SCREEN_VIEW) {
+            param(FirebaseAnalytics.Param.SCREEN_NAME, screenName)
+            param(FirebaseAnalytics.Param.SCREEN_CLASS, activity.localClassName)
+        }
+    }
+
+    override fun logUiEvent(itemId: String, action: String) {
+        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_ITEM) {
+            param(FirebaseAnalytics.Param.ITEM_ID, itemId)
+            param(FirebaseAnalytics.Param.CONTENT_TYPE, ANALYTICS_UI_EVENT_CONTENT_TYPE)
+            param(ANALYTICS_UI_ACTION_PARAM, action)
+        }
+    }
+
+    override fun setUserSignedIn(isSignedIn: Boolean) {
+        firebaseAnalytics.setUserProperty(ANALYTICS_USER_SIGNED_IN_PROPERTY, isSignedIn.toString())
+    }
+
+    override fun setUserRegistered(registered: Boolean) {
+        firebaseAnalytics.setUserProperty(ANALYTICS_USER_REGISTERED_PROPERTY, registered.toString())
+    }
+}

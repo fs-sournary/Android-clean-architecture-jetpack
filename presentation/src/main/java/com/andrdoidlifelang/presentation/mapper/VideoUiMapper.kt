@@ -1,8 +1,8 @@
 package com.andrdoidlifelang.presentation.mapper
 
 import com.andrdoidlifelang.domain.model.Video
-import com.andrdoidlifelang.domain.repository.UseCaseResult
-import com.andrdoidlifelang.domain.repository.data
+import com.andrdoidlifelang.domain.result.UseCaseResult
+import com.andrdoidlifelang.domain.result.data
 import com.andrdoidlifelang.presentation.model.VideoUi
 
 fun UseCaseResult<List<Video>>.map(): UseCaseResult<List<VideoUi>> {

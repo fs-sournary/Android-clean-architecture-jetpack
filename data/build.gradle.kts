@@ -86,6 +86,8 @@ dependencies {
     implementation(Lib.FIREBASE_ANALYTICS_KTX)
     implementation(Lib.FIREBASE_CRASHLYTICS_KTX)
     implementation(Lib.FIREBASE_AUTH)
+    implementation(Lib.FIREBASE_FIRESTORE)
+    implementation(Lib.FIREBASE_MESSAGING)
 
     // Test
     implementation(Lib.JUNIT)

@@ -17,7 +17,7 @@ object Version {
     const val ROOM = "2.2.5"
     const val PAGING = "3.0.0-alpha09"
     const val WORK = "2.4.0"
-    const val HILT = "2.29.1-alpha"
+    const val HILT = "2.28-alpha"
     const val HILT_ANDROID = "1.0.0-alpha01"
     const val KOTLIN = "1.4.10"
     const val COROUTINES = "1.4.1"

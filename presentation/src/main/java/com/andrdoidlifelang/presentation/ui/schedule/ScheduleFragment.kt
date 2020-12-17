@@ -4,7 +4,7 @@ import androidx.fragment.app.viewModels
 import com.andrdoidlifelang.presentation.R
 import com.andrdoidlifelang.presentation.databinding.FragmentScheduleBinding
 import com.andrdoidlifelang.presentation.ui.base.BaseMainNavigationFragment
-import com.andrdoidlifelang.presentation.util.Constant
+import com.andrdoidlifelang.presentation.util.Constant.ANALYTICS_SCHEDULE_SCREEN_NAME
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -14,5 +14,5 @@ class ScheduleFragment : BaseMainNavigationFragment<FragmentScheduleBinding, Sch
 
     override val layoutId: Int = R.layout.fragment_schedule
 
-    override val screenName: String = Constant.ANALYTICS_SCHEDULE_SCREEN_NAME
+    override val screenName: String = ANALYTICS_SCHEDULE_SCREEN_NAME
 }

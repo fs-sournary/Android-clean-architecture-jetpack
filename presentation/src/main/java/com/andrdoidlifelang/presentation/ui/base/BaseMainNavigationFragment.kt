@@ -9,8 +9,8 @@ import androidx.core.view.updateLayoutParams
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import com.andrdoidlifelang.presentation.R
-import com.androidlifelang.corepresentation.ext.autoClear
-import com.androidlifelang.corepresentation.ext.getSystemWindowInsetEdge
+import com.andrdoidlifelang.presentation.ext.autoClear
+import com.andrdoidlifelang.presentation.ext.getSystemWindowInsetEdge
 
 /**
  * Base class for fragments in main. This class handles setting up [Toolbar] with navigation icon.

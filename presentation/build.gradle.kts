@@ -51,7 +51,6 @@ android {
 
 dependencies {
 
-    implementation(project(Module.CORE_PRESENTATION))
     implementation(project(Module.DOMAIN))
     implementation(project(Module.DATA))
 
@@ -63,6 +62,7 @@ dependencies {
     implementation(Lib.CORE_KTX)
     implementation(Lib.TIMBER)
     implementation(Lib.BROWSER)
+    implementation(Lib.PREFERENCE)
 
     // UI
     implementation(Lib.CONSTRAINT_LAYOUT)
@@ -104,6 +104,8 @@ dependencies {
     implementation(Lib.FIREBASE_ANALYTICS_KTX)
     implementation(Lib.FIREBASE_CRASHLYTICS_KTX)
     implementation(Lib.FIREBASE_AUTH)
+    implementation(Lib.FIREBASE_MESSAGING)
+    implementation(Lib.FIREBASE_FIRESTORE)
 
     // Testing
     testImplementation(Lib.JUNIT)

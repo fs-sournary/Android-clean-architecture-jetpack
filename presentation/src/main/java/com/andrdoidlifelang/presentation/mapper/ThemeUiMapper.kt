@@ -2,9 +2,9 @@ package com.andrdoidlifelang.presentation.mapper
 
 import android.os.Build
 import com.andrdoidlifelang.domain.model.Theme
-import com.andrdoidlifelang.domain.repository.UseCaseResult
-import com.andrdoidlifelang.domain.repository.data
-import com.androidlifelang.corepresentation.model.ThemeUi
+import com.andrdoidlifelang.domain.result.UseCaseResult
+import com.andrdoidlifelang.domain.result.data
+import com.andrdoidlifelang.presentation.model.ThemeUi
 
 fun UseCaseResult<List<Theme>>.mapList(): UseCaseResult<List<ThemeUi>> {
     val themeUis = this.data?.map { it.map() } ?: emptyList()

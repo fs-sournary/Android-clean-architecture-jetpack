@@ -1,6 +1,6 @@
 package com.andrdoidlifelang.domain.usecase
 
-import com.andrdoidlifelang.domain.repository.UseCaseResult
+import com.andrdoidlifelang.domain.result.UseCaseResult
 
 /**
  * Base class for use cases that use the suspend function of coroutines. If there is an exception,

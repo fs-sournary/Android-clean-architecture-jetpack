@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary_variant</item>
@@ -23,17 +23,5 @@
         <item name="android:fontFamily">@font/google_sans_medium</item>
     </style>
 
-    <style name="AppTheme" parent="Base.Theme" />
-
-    <style name="Widget.AndroidACleanArchitectureJetpack.Toolbar" parent="Widget.MaterialComponents.Toolbar">
-        <item name="android:paddingEnd">8dp</item>
-        <item name="contentInsetStartWithNavigation">0dp</item>
-        <item name="popupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
-        <item name="titleTextAppearance">@style/TextAppearance.AndroidACleanArchitectureJetpack.ToolbarTitle</item>
-    </style>
-
-    <style name="TextAppearance.AndroidACleanArchitectureJetpack.ToolbarTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:fontFamily">@font/google_sans</item>
-        <item name="android:textSize">20sp</item>
-    </style>
+    <style name="Theme.AndroidACleanArchitectureJetpack" parent="Theme.Base" />
 </resources>

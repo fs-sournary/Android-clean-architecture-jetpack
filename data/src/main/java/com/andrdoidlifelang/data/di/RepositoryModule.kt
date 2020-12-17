@@ -1,21 +1,33 @@
 package com.andrdoidlifelang.data.di
 
-import com.andrdoidlifelang.data.repository.MovieRepositoryImpl
-import com.andrdoidlifelang.data.repository.ThemeRepositoryImpl
-import com.andrdoidlifelang.domain.repository.MovieRepository
-import com.andrdoidlifelang.domain.repository.ThemeRepository
-import dagger.Binds
+import com.andrdoidlifelang.data.net.MovieApi
+import com.andrdoidlifelang.data.pref.AppPreference
+import com.andrdoidlifelang.data.repository.SignInRepositoryImpl
+import com.andrdoidlifelang.data.repository.HomeRepositoryImpl
+import com.andrdoidlifelang.data.repository.SettingRepositoryImpl
+import com.andrdoidlifelang.domain.repository.SignInRepository
+import com.andrdoidlifelang.domain.repository.HomeRepository
+import com.andrdoidlifelang.domain.repository.SettingRepository
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
+import javax.inject.Singleton
 
 @InstallIn(ApplicationComponent::class)
 @Module
-abstract class RepositoryModule {
+object RepositoryModule {
 
-    @Binds
-    abstract fun bindMovieRepository(impl: MovieRepositoryImpl): MovieRepository
+    @Singleton
+    @Provides
+    fun provideThemeRepository(appPreference: AppPreference): SettingRepository =
+        SettingRepositoryImpl(appPreference)
 
-    @Binds
-    abstract fun bindThemeRepository(impl: ThemeRepositoryImpl): ThemeRepository
+    @Singleton
+    @Provides
+    fun provideAuthStateUserRepository(): SignInRepository = SignInRepositoryImpl()
+
+    @Singleton
+    @Provides
+    fun provideMovieRepository(movieApi: MovieApi): HomeRepository = HomeRepositoryImpl(movieApi)
 }

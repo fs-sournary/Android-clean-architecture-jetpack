@@ -10,4 +10,18 @@
         <item name="android:drawable">@drawable/ic_movie_camera</item>
         <item name="margin">24dp</item>
     </style>
+
+    <style name="Widget.AndroidACleanArchitectureJetpack.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:paddingEnd">8dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="popupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
+        <item name="titleTextAppearance">
+            @style/TextAppearance.AndroidACleanArchitectureJetpack.Toolbar.Title
+        </item>
+    </style>
+
+    <style name="TextAppearance.AndroidACleanArchitectureJetpack.Toolbar.Title" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textSize">20sp</item>
+    </style>
 </resources>

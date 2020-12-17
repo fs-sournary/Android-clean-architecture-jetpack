@@ -1,2 +1,2 @@
-include (":corepresentation", ":domain", ":data", ":presentation")
+include (":domain", ":data", ":presentation")
 rootProject.name = "Android-clean-architecture-jetpack"

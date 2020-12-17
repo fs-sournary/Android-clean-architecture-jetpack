@@ -8,12 +8,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.andrdoidlifelang.domain.model.Theme
-import com.andrdoidlifelang.domain.repository.successOr
+import com.andrdoidlifelang.domain.result.successOr
 import com.andrdoidlifelang.domain.usecase.GetAvailableThemesUseCase
 import com.andrdoidlifelang.domain.usecase.GetThemeUseCase
 import com.andrdoidlifelang.domain.usecase.SetThemeUseCase
 import com.andrdoidlifelang.presentation.mapper.map
-import com.androidlifelang.corepresentation.model.ThemeUi
+import com.andrdoidlifelang.presentation.model.ThemeUi
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 

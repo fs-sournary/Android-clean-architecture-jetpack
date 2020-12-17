@@ -6,6 +6,9 @@ object Constant {
 
     // Common
     const val CHROME_PACKAGE = "com.android.chrome"
+    const val NOTIFICATION_ID = 111
+    const val MOVIE_CHANNEL = "movie_channel"
+    const val MOVIE_CHANNEL_ID = "movie_channel_id"
 
     // Navigation
     const val NAV_ID_NONE = -1

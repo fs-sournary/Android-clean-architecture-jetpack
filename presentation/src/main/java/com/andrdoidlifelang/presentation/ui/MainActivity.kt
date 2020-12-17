@@ -2,9 +2,11 @@ package com.andrdoidlifelang.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.core.view.updatePadding
+import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -14,41 +16,38 @@ import androidx.recyclerview.widget.RecyclerView
 import com.andrdoidlifelang.presentation.R
 import com.andrdoidlifelang.presentation.databinding.ActivityMainBinding
 import com.andrdoidlifelang.presentation.databinding.NavDrawerHeaderBinding
+import com.andrdoidlifelang.presentation.ext.createNavigationDrawerItemBackground
+import com.andrdoidlifelang.presentation.ext.getSystemWindowInsetEdge
+import com.andrdoidlifelang.presentation.ext.requestInsetsWhenAttached
+import com.andrdoidlifelang.presentation.ext.shouldCloseFromBackPress
+import com.andrdoidlifelang.presentation.ext.updateTheme
 import com.andrdoidlifelang.presentation.ui.base.NavigationHostListener
-import com.andrdoidlifelang.presentation.util.Constant
+import com.andrdoidlifelang.presentation.util.Constant.NAV_HOST_DESTINATIONS
+import com.andrdoidlifelang.presentation.util.Constant.NAV_ID_NONE
+import com.andrdoidlifelang.presentation.util.EdgeToEdge
 import com.andrdoidlifelang.presentation.util.EventObserver
 import com.andrdoidlifelang.presentation.widget.MovieHashTagItemDecoration
-import com.androidlifelang.corepresentation.ext.createNavigationDrawerItemBackground
-import com.androidlifelang.corepresentation.ext.getSystemWindowInsetEdge
-import com.androidlifelang.corepresentation.ext.requestInsetsWhenAttached
-import com.androidlifelang.corepresentation.ext.shouldCloseFromBackPress
-import com.androidlifelang.corepresentation.ext.updateTheme
-import com.androidlifelang.corepresentation.ui.CoreActivity
-import com.androidlifelang.corepresentation.utils.EdgeToEdge
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : CoreActivity<ActivityMainBinding, MainViewModel>(), NavigationHostListener {
+class MainActivity : AppCompatActivity(), NavigationHostListener {
 
-    private var currentNavId = Constant.NAV_ID_NONE
+    private var currentNavId = NAV_ID_NONE
 
     private lateinit var navHostFragment: NavHostFragment
     private lateinit var navController: NavController
+    private lateinit var binding: ActivityMainBinding
 
-    override val viewModel: MainViewModel by viewModels()
-
-    override val layoutId: Int = R.layout.activity_main
+    private val viewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         updateTheme(viewModel.currentTheme)
-        observer()
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.lifecycleOwner = this
         setupWindow()
         setupNavigation()
-    }
-
-    private fun observer() {
-        viewModel.theme.observe(this, EventObserver(::updateTheme))
+        setupViewModel()
     }
 
     private fun setupWindow() {
@@ -72,7 +71,7 @@ class MainActivity : CoreActivity<ActivityMainBinding, MainViewModel>(), Navigat
         navController = navHostFragment.navController
         navController.addOnDestinationChangedListener { _, destination, _ ->
             currentNavId = destination.id
-            val lockMode = when (Constant.NAV_HOST_DESTINATIONS.contains(destination.id)) {
+            val lockMode = when (NAV_HOST_DESTINATIONS.contains(destination.id)) {
                 true -> DrawerLayout.LOCK_MODE_UNLOCKED
                 false -> DrawerLayout.LOCK_MODE_LOCKED_CLOSED
             }
@@ -102,8 +101,12 @@ class MainActivity : CoreActivity<ActivityMainBinding, MainViewModel>(), Navigat
         }
     }
 
+    private fun setupViewModel() {
+        viewModel.theme.observe(this, EventObserver(::updateTheme))
+    }
+
     override fun registerToolbarWithNavigation(toolbar: Toolbar) {
-        val configuration = AppBarConfiguration(Constant.NAV_HOST_DESTINATIONS, binding.drawer)
+        val configuration = AppBarConfiguration(NAV_HOST_DESTINATIONS, binding.drawer)
         toolbar.setupWithNavController(navController, configuration)
     }
 

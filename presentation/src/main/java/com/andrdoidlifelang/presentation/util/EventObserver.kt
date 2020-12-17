@@ -1,7 +1,7 @@
 package com.andrdoidlifelang.presentation.util
 
 import androidx.lifecycle.Observer
-import com.andrdoidlifelang.domain.repository.Event
+import com.andrdoidlifelang.domain.result.Event
 
 /**
  * An [Observer] for [Event]s that checks if the content has already handled.

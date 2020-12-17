@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Android-clean-architecture-jetpack</string>
+    <string name="app_name" translatable="false">Android clean architecture jetpack</string>
 
     <!-- Main Activity -->
     <string name="main_home_menu_title">Home</string>

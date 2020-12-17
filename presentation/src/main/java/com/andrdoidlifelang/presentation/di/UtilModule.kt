@@ -1,7 +1,7 @@
 package com.andrdoidlifelang.presentation.di
 
-import com.andrdoidlifelang.presentation.util.analytics.AnalyticsHelper
-import com.andrdoidlifelang.presentation.util.analytics.FirebaseAnalyticsHelper
+import com.andrdoidlifelang.presentation.analytics.AnalyticsHelper
+import com.andrdoidlifelang.presentation.analytics.FirebaseAnalyticsHelper
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

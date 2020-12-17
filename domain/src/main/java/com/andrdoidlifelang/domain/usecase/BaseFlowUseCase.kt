@@ -1,6 +1,6 @@
 package com.andrdoidlifelang.domain.usecase
 
-import com.andrdoidlifelang.domain.repository.UseCaseResult
+import com.andrdoidlifelang.domain.result.UseCaseResult
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 

@@ -1,7 +1,7 @@
 package com.andrdoidlifelang.presentation.di
 
-import com.andrdoidlifelang.domain.repository.MovieRepository
-import com.andrdoidlifelang.domain.repository.ThemeRepository
+import com.andrdoidlifelang.domain.repository.HomeRepository
+import com.andrdoidlifelang.domain.repository.SettingRepository
 import com.andrdoidlifelang.domain.usecase.GetAvailableThemesUseCase
 import com.andrdoidlifelang.domain.usecase.GetMovieVideoUseCase
 import com.andrdoidlifelang.domain.usecase.GetNowPlayingMovieUseCase
@@ -24,54 +24,54 @@ object UseCaseModule {
     @Singleton
     @Provides
     fun provideGetNowPlayingMovieUseCase(
-        movieRepository: MovieRepository
-    ): GetNowPlayingMovieUseCase = GetNowPlayingMovieUseCase(movieRepository)
+        homeRepository: HomeRepository
+    ): GetNowPlayingMovieUseCase = GetNowPlayingMovieUseCase(homeRepository)
 
     @Singleton
     @Provides
     fun provideGetUpcomingMovieUseCase(
-        movieRepository: MovieRepository
-    ): GetUpcomingMovieUseCase = GetUpcomingMovieUseCase(movieRepository)
+        homeRepository: HomeRepository
+    ): GetUpcomingMovieUseCase = GetUpcomingMovieUseCase(homeRepository)
 
     @Singleton
     @Provides
     fun provideGetTopRateMovieUseCase(
-        movieRepository: MovieRepository
-    ): GetTopRateMovieUseCase = GetTopRateMovieUseCase(movieRepository)
+        homeRepository: HomeRepository
+    ): GetTopRateMovieUseCase = GetTopRateMovieUseCase(homeRepository)
 
     @Singleton
     @Provides
     fun provideGetPopularMovieUseCase(
-        movieRepository: MovieRepository
-    ): GetPopularMovieUseCase = GetPopularMovieUseCase(movieRepository)
+        homeRepository: HomeRepository
+    ): GetPopularMovieUseCase = GetPopularMovieUseCase(homeRepository)
 
     @Singleton
     @Provides
     fun provideGetMovieVideoUseCase(
-        movieRepository: MovieRepository
-    ): GetMovieVideoUseCase = GetMovieVideoUseCase(movieRepository)
+        homeRepository: HomeRepository
+    ): GetMovieVideoUseCase = GetMovieVideoUseCase(homeRepository)
 
     @Singleton
     @Provides
     fun provideGetAvailableThemesUseCase(
-        themeRepository: ThemeRepository
-    ): GetAvailableThemesUseCase = GetAvailableThemesUseCase(themeRepository)
+        settingRepository: SettingRepository
+    ): GetAvailableThemesUseCase = GetAvailableThemesUseCase(settingRepository)
 
     @Singleton
     @Provides
     fun provideGetThemeUseCase(
-        themeRepository: ThemeRepository
-    ): GetThemeUseCase = GetThemeUseCase(themeRepository)
+        settingRepository: SettingRepository
+    ): GetThemeUseCase = GetThemeUseCase(settingRepository)
 
     @Singleton
     @Provides
     fun provideSetThemeUseCase(
-        themeRepository: ThemeRepository
-    ): SetThemeUseCase = SetThemeUseCase(themeRepository)
+        settingRepository: SettingRepository
+    ): SetThemeUseCase = SetThemeUseCase(settingRepository)
 
     @Singleton
     @Provides
     fun provideGetThemeObservableUseCase(
-        themeRepository: ThemeRepository
-    ): GetThemeObservableUseCase = GetThemeObservableUseCase(themeRepository)
+        settingRepository: SettingRepository
+    ): GetThemeObservableUseCase = GetThemeObservableUseCase(settingRepository)
 }
