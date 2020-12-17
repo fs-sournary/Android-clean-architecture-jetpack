@@ -1,6 +1,3 @@
-import java.io.FileInputStream
-import java.util.Properties
-
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -26,7 +23,6 @@ android {
         versionCode = Version.VERSION_CODE
         versionName = Version.VERSION_NAME
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "apiKey", getApiKey()["API_KEY"] as String)
     }
     buildTypes {
         getByName("release") {
@@ -51,10 +47,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-}
-
-fun getApiKey(): Properties = Properties().apply {
-    load(FileInputStream(File("secrets.properties")))
 }
 
 dependencies {
