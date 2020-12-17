@@ -29,7 +29,10 @@ object ApiManager {
 
     private fun getHeaderInterceptor(): Interceptor = Interceptor.invoke {
         val request = it.request()
-        val newUrl = request.url.newBuilder().addQueryParameter(Constant.API_KEY_PARAMS, "").build()
+        val newUrl = request.url
+            .newBuilder()
+            .addQueryParameter(Constant.API_KEY_PARAMS, BuildConfig.API_KEY)
+            .build()
         val newRequest = request.newBuilder().apply { url(newUrl) }.build()
         it.proceed(newRequest)
     }

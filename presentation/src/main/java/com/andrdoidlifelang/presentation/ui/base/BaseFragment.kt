@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
-import com.andrdoidlifelang.data.analytics.AnalyticsHelper
+import com.andrdoidlifelang.presentation.util.analytics.AnalyticsHelper
 import com.androidlifelang.corepresentation.ui.CoreFragment
 import javax.inject.Inject
 
