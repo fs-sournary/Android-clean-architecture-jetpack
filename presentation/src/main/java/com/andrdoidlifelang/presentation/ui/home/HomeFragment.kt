@@ -6,11 +6,15 @@ import com.andrdoidlifelang.presentation.databinding.FragmentHomeBinding
 import com.andrdoidlifelang.presentation.ui.base.BaseMainNavigationFragment
 import com.andrdoidlifelang.presentation.util.Constant
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 
+@FlowPreview
+@ExperimentalCoroutinesApi
 @AndroidEntryPoint
 class HomeFragment : BaseMainNavigationFragment<FragmentHomeBinding, HomeViewModel>() {
 
-    override val viewModel by viewModels<HomeViewModel>()
+    override val viewModel: HomeViewModel by viewModels()
 
     override val layoutId: Int = R.layout.fragment_home
 

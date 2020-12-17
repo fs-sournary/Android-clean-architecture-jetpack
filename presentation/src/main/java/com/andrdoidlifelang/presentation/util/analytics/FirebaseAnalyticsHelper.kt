@@ -1,4 +1,4 @@
-package com.andrdoidlifelang.data.analytics
+package com.andrdoidlifelang.presentation.util.analytics
 
 import android.app.Activity
 import com.andrdoidlifelang.data.util.Constant
