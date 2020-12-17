@@ -1,4 +1,4 @@
-package com.andrdoidlifelang.presentation.ui
+package com.andrdoidlifelang.presentation.ui.setting.detailsetting
 
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
@@ -14,27 +14,20 @@ import com.andrdoidlifelang.domain.usecase.GetThemeObservableUseCase
 import com.andrdoidlifelang.domain.usecase.GetThemeUseCase
 import com.andrdoidlifelang.presentation.mapper.map
 import com.androidlifelang.corepresentation.model.ThemeUi
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.runBlocking
 
-class MainViewModel @ViewModelInject constructor(
+class DetailSettingViewModel @ViewModelInject constructor(
     @Assisted savedStateHandle: SavedStateHandle,
     getThemeObservableUseCase: GetThemeObservableUseCase,
-    private val getThemeUseCase: GetThemeUseCase
+    getThemeUseCase: GetThemeUseCase
 ) : ViewModel() {
 
-    val theme: LiveData<Event<ThemeUi>> = getThemeObservableUseCase(Unit)
+    val themeObservable: LiveData<ThemeUi> = getThemeObservableUseCase(Unit)
+        .map { it.successOr { Theme.SYSTEM }.map() }
+        .asLiveData()
+
+    val currentTheme: LiveData<Event<ThemeUi>> = getThemeUseCase(Unit)
         .map { it.successOr { Theme.SYSTEM }.map() }
         .asLiveData()
         .map { Event(it) }
-
-    val currentTheme: ThemeUi
-        get() = runBlocking {
-            var theme: ThemeUi = ThemeUi.SYSTEM
-            getThemeUseCase(Unit).collect {
-                theme = it.successOr { Theme.LIGHT }.map()
-            }
-            theme
-        }
 }

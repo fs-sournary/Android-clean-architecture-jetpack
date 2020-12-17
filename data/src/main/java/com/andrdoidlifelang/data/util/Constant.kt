@@ -12,6 +12,7 @@ object Constant {
     const val PREF_NAME = "androidlifelang_pref"
     const val DEF_PREF_STRING = ""
     const val ACCESS_TOKEN_KEY = "access_token_key"
+    const val PREF_DARK_MODE_ENABLE = "pref_dark_mode"
 
     // Database
     const val MOVIE_DB_NAME = "movie.db"

@@ -109,4 +109,7 @@ dependencies {
     testImplementation(Lib.JUNIT)
     androidTestImplementation(Lib.EXT_JUNIT)
     androidTestImplementation(Lib.ESPRESSO)
+
+    // Preference
+    implementation(Lib.PREFERENCE)
 }

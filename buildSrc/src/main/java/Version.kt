@@ -27,6 +27,7 @@ object Version {
     const val JUNIT = "4.13.1"
     const val EXT_JUNIT = "1.1.2"
     const val ESPRESSO = "3.3.0"
+    const val PREFERENCE = "1.1.1"
 
     // Firebase
     const val GOOGLE_SERVICE = "4.3.4"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android-clean-architecture-jetpack</string>
+    <string name="app_name" translatable="false">Android-clean-architecture-jetpack</string>
 
     <!-- Main Activity -->
     <string name="main_home_menu_title">Home</string>
@@ -34,4 +34,26 @@
     <string name="sign_in_manage_account_on_device_action">Manage accounts on this device</string>
     <string name="sign_in_privacy_policy">Privacy Policy</string>
     <string name="sign_in_term_of_service">Terms of Service</string>
+
+    <!-- Setting fragment -->
+    <string name="setting_category_display">Display</string>
+    <string name="setting_item_theme">Theme</string>
+    <string name="setting_item_theme_default">Default</string>
+    <string name="setting_category_sound">Sound</string>
+    <string name="setting_item_notify">Notification</string>
+    <string name="setting_category_help">Help</string>
+    <string name="setting_item_term_of_use">Term of Service</string>
+    <string name="setting_item_voted">Vote</string>
+    <string name="setting_item_version">Version</string>
+    <string name="setting_item_feedback">Feedback</string>
+    <string name="setting_item_language">Language</string>
+    <string name="setting_item_language_en">English - United State</string>
+    <string name="setting_item_language_vi">Vietnamese</string>
+
+    <!-- Setting theme fragment -->
+    <string name="setting_theme_title">Choose Theme</string>
+    <string name="setting_theme_light">Light</string>
+    <string name="setting_theme_dark">Dark</string>
+    <string name="setting_theme_system">System</string>
+    <string name="setting_theme_battery_save">Set by Battery save</string>
 </resources>

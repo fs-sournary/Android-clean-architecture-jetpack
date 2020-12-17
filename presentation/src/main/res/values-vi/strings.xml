@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main Activity -->
+    <string name="main_home_menu_title">Màn hình chính</string>
+    <string name="main_schedule_menu_title">Lập lịch</string>
+    <string name="main_agenda_menu_title">Agenda</string>
+    <string name="main_map_menu_title">Bản đồ</string>
+    <string name="main_info_menu_title">Thông tin</string>
+    <string name="main_setting_menu_title">Cài đặt</string>
+
+    <!-- Home fragment -->
+    <string name="home_title">Màn hình chính</string>
+
+    <!-- Schedule fragment -->
+    <string name="schedule_title">Lập lịch</string>
+
+    <!-- Agenda fragment -->
+    <string name="agenda_title">Agenda</string>
+
+    <!-- Map fragment -->
+    <string name="map_title">Bản đồ</string>
+
+    <!-- Info fragment -->
+    <string name="info_title">Thông tin</string>
+
+    <!-- Setting fragment -->
+    <string name="setting_title">Cài đặt</string>
+
+    <!-- Sign in dialog -->
+    <string name="sign_in_welcome_message">Chào mừng</string>
+    <string name="sign_in_manage_google_account_action">Quản lý tài khoản Google của bạn</string>
+    <string name="sign_in_add_account_action">Thêm tài khoản khác</string>
+    <string name="sign_in_manage_account_on_device_action">Quản lý tài khoản trên thiết bị của bạn</string>
+    <string name="sign_in_privacy_policy">Chính sách bảo mật</string>
+    <string name="sign_in_term_of_service">Điều khoản sử dụng</string>
+
+    <!-- Setting fragment -->
+    <string name="setting_category_display">Hiển thị</string>
+    <string name="setting_item_theme">Giao diện</string>
+    <string name="setting_item_theme_default">Mặc định</string>
+    <string name="setting_category_sound">Âm thanh</string>
+    <string name="setting_item_notify">Thông báo</string>
+    <string name="setting_category_help">Hỗ trợ</string>
+    <string name="setting_item_term_of_use">Điều khoản sử dụng</string>
+    <string name="setting_item_voted">Đánh giá</string>
+    <string name="setting_item_version">Phiên bản</string>
+    <string name="setting_item_feedback">Đánh giá</string>
+    <string name="setting_item_language">Ngôn ngữ</string>
+    <string name="setting_item_language_en">Tiếng Anh - Mỹ</string>
+    <string name="setting_item_language_vi">Tiếng Việt</string>
+    <string name="setting_theme_title">Chọn giao diện</string>
+    <string name="setting_theme_light">Sáng</string>
+    <string name="setting_theme_dark">Tối</string>
+    <string name="setting_theme_system">Hệ thống</string>
+    <string name="setting_theme_battery_save">Theo chế độ Tiết kiệm pin</string>
+</resources>

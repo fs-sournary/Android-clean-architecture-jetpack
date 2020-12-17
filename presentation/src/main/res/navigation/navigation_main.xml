@@ -34,4 +34,9 @@
         android:id="@+id/setting_dest"
         android:name="com.andrdoidlifelang.presentation.ui.setting.SettingFragment"
         tools:layout="@layout/fragment_setting" />
+
+    <dialog
+        android:id="@+id/setting_theme"
+        android:name="com.andrdoidlifelang.presentation.ui.setting.theme.SettingThemeFragment"
+        android:label="SettingThemeFragment" />
 </navigation>
