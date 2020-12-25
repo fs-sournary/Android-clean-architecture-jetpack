@@ -1,6 +1,6 @@
 package com.androidlifelang.corepresentation.model
 
-enum class Theme(val storageKey: String) {
+enum class ThemeUi(val storageKey: String) {
     LIGHT("light"),
     DARK("dark"),
     SYSTEM("system"),
@@ -8,7 +8,7 @@ enum class Theme(val storageKey: String) {
 }
 
 /**
- * Return the matching [Theme] for the given [storageKey] value.
+ * Return the matching [ThemeUi] for the given [storageKey] value.
  */
-fun themeForStorageKey(storageKey: String): Theme? =
-    Theme.values().firstOrNull { it.storageKey == storageKey }
+fun themeForStorageKey(storageKey: String): ThemeUi? =
+    ThemeUi.values().firstOrNull { it.storageKey == storageKey }

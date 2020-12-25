@@ -91,4 +91,7 @@ object Lib {
     const val JUNIT = "junit:junit:${Version.JUNIT}"
     const val EXT_JUNIT = "androidx.test.ext:junit:${Version.EXT_JUNIT}"
     const val ESPRESSO = "androidx.test.espresso:espresso-core:${Version.ESPRESSO}"
+
+    // Preferences
+    const val PREFERENCE = "androidx.preference:preference-ktx:${Version.PREFERENCE}"
 }

@@ -16,13 +16,13 @@ import com.andrdoidlifelang.presentation.databinding.ActivityMainBinding
 import com.andrdoidlifelang.presentation.databinding.NavDrawerHeaderBinding
 import com.andrdoidlifelang.presentation.ui.base.NavigationHostListener
 import com.andrdoidlifelang.presentation.util.Constant
+import com.andrdoidlifelang.presentation.util.EventObserver
 import com.andrdoidlifelang.presentation.widget.MovieHashTagItemDecoration
 import com.androidlifelang.corepresentation.ext.createNavigationDrawerItemBackground
 import com.androidlifelang.corepresentation.ext.getSystemWindowInsetEdge
 import com.androidlifelang.corepresentation.ext.requestInsetsWhenAttached
 import com.androidlifelang.corepresentation.ext.shouldCloseFromBackPress
 import com.androidlifelang.corepresentation.ext.updateTheme
-import com.androidlifelang.corepresentation.model.Theme
 import com.androidlifelang.corepresentation.ui.CoreActivity
 import com.androidlifelang.corepresentation.utils.EdgeToEdge
 import dagger.hilt.android.AndroidEntryPoint
@@ -40,10 +40,15 @@ class MainActivity : CoreActivity<ActivityMainBinding, MainViewModel>(), Navigat
     override val layoutId: Int = R.layout.activity_main
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        updateTheme(Theme.LIGHT)
         super.onCreate(savedInstanceState)
+        updateTheme(viewModel.currentTheme)
+        observer()
         setupWindow()
         setupNavigation()
+    }
+
+    private fun observer() {
+        viewModel.theme.observe(this, EventObserver(::updateTheme))
     }
 
     private fun setupWindow() {

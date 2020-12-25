@@ -2,16 +2,16 @@ package com.androidlifelang.corepresentation.ext
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.androidlifelang.corepresentation.model.Theme
+import com.androidlifelang.corepresentation.model.ThemeUi
 
 /**
  * Update theme base on user setting.
  */
-fun AppCompatActivity.updateTheme(theme: Theme) {
+fun AppCompatActivity.updateTheme(theme: ThemeUi) {
     delegate.localNightMode = when (theme) {
-        Theme.LIGHT -> AppCompatDelegate.MODE_NIGHT_NO
-        Theme.DARK -> AppCompatDelegate.MODE_NIGHT_YES
-        Theme.SYSTEM -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+        ThemeUi.LIGHT -> AppCompatDelegate.MODE_NIGHT_NO
+        ThemeUi.DARK -> AppCompatDelegate.MODE_NIGHT_YES
+        ThemeUi.SYSTEM -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
         else -> AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY
     }
 }

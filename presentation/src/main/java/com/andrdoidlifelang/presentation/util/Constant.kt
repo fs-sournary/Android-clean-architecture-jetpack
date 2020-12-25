@@ -26,4 +26,5 @@ object Constant {
     const val ANALYTICS_INFO_SCREEN_NAME = "info"
     const val ANALYTICS_SETTING_SCREEN_NAME = "setting"
     const val ANALYTICS_SIGN_IN_DIALOG_NAME = "sign_in"
+    const val ANALYTICS_SETTING_THEME_SCREEN_NAME = "setting_theme"
 }

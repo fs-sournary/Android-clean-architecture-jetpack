@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:key="kc_display"
+        app:title="@string/setting_category_display">
+
+        <Preference
+            app:key="k_theme"
+            app:title="@string/setting_item_theme" />
+
+        <Preference
+            app:key="k_language"
+            app:title="@string/setting_item_language" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="kc_sound"
+        app:title="@string/setting_category_sound"
+        app:allowDividerBelow="false">
+
+        <SwitchPreference
+            app:key="k_notification"
+            app:title="@string/setting_item_notify" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/setting_category_help"
+        app:allowDividerBelow="false"
+        app:key="kc_communication">
+
+        <Preference
+            app:key="k_feed_back"
+            app:title="@string/setting_item_feedback" />
+
+        <Preference
+            app:key="k_term_of_use"
+            app:title="@string/setting_item_term_of_use" />
+
+        <Preference
+            app:key="k_vote"
+            app:title="@string/setting_item_voted" />
+
+        <Preference
+            app:key="k_version"
+            app:title="@string/setting_item_version" />
+    </PreferenceCategory>
+</PreferenceScreen>
