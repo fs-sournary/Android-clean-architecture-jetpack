@@ -1,5 +1,6 @@
 package com.andrdoidlifelang.presentation.ui
 
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.widget.Toolbar
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.andrdoidlifelang.presentation.R
 import com.andrdoidlifelang.presentation.databinding.ActivityMainBinding
 import com.andrdoidlifelang.presentation.databinding.NavDrawerHeaderBinding
+import com.andrdoidlifelang.presentation.ext.wrap
 import com.andrdoidlifelang.presentation.ui.base.NavigationHostListener
 import com.andrdoidlifelang.presentation.util.Constant
 import com.andrdoidlifelang.presentation.util.EventObserver
@@ -39,12 +41,21 @@ class MainActivity : CoreActivity<ActivityMainBinding, MainViewModel>(), Navigat
 
     override val layoutId: Int = R.layout.activity_main
 
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(newBase?.wrap())
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         updateTheme(viewModel.currentTheme)
         observer()
         setupWindow()
         setupNavigation()
+    }
+
+    override fun updateLanguage() {
+        val newContext: Context = wrap()
+        resources.updateConfiguration(newContext.resources.configuration, newContext.resources.displayMetrics)
     }
 
     private fun observer() {

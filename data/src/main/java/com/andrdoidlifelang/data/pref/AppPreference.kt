@@ -13,4 +13,10 @@ interface AppPreference {
     fun getTheme(): String
 
     fun observableSelectedTheme(): Flow<String>
+
+    fun setLanguage(language: String)
+
+    fun getLanguage(): String
+
+    fun observableSelectLanguage(): Flow<String>
 }

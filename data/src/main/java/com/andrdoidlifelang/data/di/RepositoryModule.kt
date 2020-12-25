@@ -1,7 +1,9 @@
 package com.andrdoidlifelang.data.di
 
+import com.andrdoidlifelang.data.repository.LanguageRepositoryImpl
 import com.andrdoidlifelang.data.repository.MovieRepositoryImpl
 import com.andrdoidlifelang.data.repository.ThemeRepositoryImpl
+import com.andrdoidlifelang.domain.repository.LanguageRepository
 import com.andrdoidlifelang.domain.repository.MovieRepository
 import com.andrdoidlifelang.domain.repository.ThemeRepository
 import dagger.Binds
@@ -18,4 +20,7 @@ abstract class RepositoryModule {
 
     @Binds
     abstract fun bindThemeRepository(impl: ThemeRepositoryImpl): ThemeRepository
+
+    @Binds
+    abstract fun bindLanguageRepository(impl: LanguageRepositoryImpl): LanguageRepository
 }

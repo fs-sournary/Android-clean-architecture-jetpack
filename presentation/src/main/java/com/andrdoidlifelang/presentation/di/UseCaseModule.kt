@@ -1,8 +1,12 @@
 package com.andrdoidlifelang.presentation.di
 
+import com.andrdoidlifelang.domain.repository.LanguageRepository
 import com.andrdoidlifelang.domain.repository.MovieRepository
 import com.andrdoidlifelang.domain.repository.ThemeRepository
+import com.andrdoidlifelang.domain.usecase.GetAvailableLanguageUseCase
 import com.andrdoidlifelang.domain.usecase.GetAvailableThemesUseCase
+import com.andrdoidlifelang.domain.usecase.GetLanguageObservableUseCase
+import com.andrdoidlifelang.domain.usecase.GetLanguageUseCase
 import com.andrdoidlifelang.domain.usecase.GetMovieVideoUseCase
 import com.andrdoidlifelang.domain.usecase.GetNowPlayingMovieUseCase
 import com.andrdoidlifelang.domain.usecase.GetPopularMovieUseCase
@@ -10,6 +14,7 @@ import com.andrdoidlifelang.domain.usecase.GetThemeObservableUseCase
 import com.andrdoidlifelang.domain.usecase.GetThemeUseCase
 import com.andrdoidlifelang.domain.usecase.GetTopRateMovieUseCase
 import com.andrdoidlifelang.domain.usecase.GetUpcomingMovieUseCase
+import com.andrdoidlifelang.domain.usecase.SetLanguageUseCase
 import com.andrdoidlifelang.domain.usecase.SetThemeUseCase
 import dagger.Module
 import dagger.Provides
@@ -74,4 +79,28 @@ object UseCaseModule {
     fun provideGetThemeObservableUseCase(
         themeRepository: ThemeRepository
     ): GetThemeObservableUseCase = GetThemeObservableUseCase(themeRepository)
+
+    @Singleton
+    @Provides
+    fun provideGetAvailableLanguageUseCase(
+        languageRepository: LanguageRepository
+    ): GetAvailableLanguageUseCase = GetAvailableLanguageUseCase(languageRepository)
+
+    @Singleton
+    @Provides
+    fun provideGetLanguageUseCase(
+        languageRepository: LanguageRepository
+    ): GetLanguageUseCase = GetLanguageUseCase(languageRepository)
+
+    @Singleton
+    @Provides
+    fun provideSetLanguageUseCase(
+        languageRepository: LanguageRepository
+    ): SetLanguageUseCase = SetLanguageUseCase(languageRepository)
+
+    @Singleton
+    @Provides
+    fun provideGetLanguageObservableUseCase(
+        languageRepository: LanguageRepository
+    ): GetLanguageObservableUseCase = GetLanguageObservableUseCase(languageRepository)
 }

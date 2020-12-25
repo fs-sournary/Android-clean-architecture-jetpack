@@ -12,6 +12,7 @@ object Lib {
     const val BROWSER = "androidx.browser:browser:${Version.BROWSER}"
     const val TIMBER = "com.jakewharton.timber:timber:${Version.TIMBER}"
     const val TRANSITION = "androidx.transition:transition:${Version.TRANSITION}"
+    const val PREFERENCE = "androidx.preference:preference-ktx:${Version.PREFERENCE}"
 
     // UI
     const val SWIPE_REFRESH_LAYOUT =
@@ -91,7 +92,4 @@ object Lib {
     const val JUNIT = "junit:junit:${Version.JUNIT}"
     const val EXT_JUNIT = "androidx.test.ext:junit:${Version.EXT_JUNIT}"
     const val ESPRESSO = "androidx.test.espresso:espresso-core:${Version.ESPRESSO}"
-
-    // Preferences
-    const val PREFERENCE = "androidx.preference:preference-ktx:${Version.PREFERENCE}"
 }

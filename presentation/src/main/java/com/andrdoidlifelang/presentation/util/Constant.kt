@@ -27,4 +27,9 @@ object Constant {
     const val ANALYTICS_SETTING_SCREEN_NAME = "setting"
     const val ANALYTICS_SIGN_IN_DIALOG_NAME = "sign_in"
     const val ANALYTICS_SETTING_THEME_SCREEN_NAME = "setting_theme"
+    const val ANALYTICS_SETTING_LANGUAGE_SCREEN_NAME = "setting_language"
+
+    // Share preference key
+    private const val PREF_LANGUAGE = "pref_language"
+    private const val PREF_NAME = "androidlifelang_pref"
 }

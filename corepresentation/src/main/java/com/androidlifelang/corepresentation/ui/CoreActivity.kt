@@ -19,7 +19,10 @@ abstract class CoreActivity<ViewBinding : ViewDataBinding, VM : ViewModel> : App
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Binding
+        updateLanguage()
         binding = DataBindingUtil.setContentView(this, layoutId)
         binding.lifecycleOwner = this
     }
+
+    open fun updateLanguage() {}
 }

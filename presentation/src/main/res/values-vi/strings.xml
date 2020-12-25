@@ -49,9 +49,14 @@
     <string name="setting_item_language">Ngôn ngữ</string>
     <string name="setting_item_language_en">Tiếng Anh - Mỹ</string>
     <string name="setting_item_language_vi">Tiếng Việt</string>
+
+    <!-- Setting theme fragment -->
     <string name="setting_theme_title">Chọn giao diện</string>
     <string name="setting_theme_light">Sáng</string>
     <string name="setting_theme_dark">Tối</string>
     <string name="setting_theme_system">Hệ thống</string>
     <string name="setting_theme_battery_save">Theo chế độ Tiết kiệm pin</string>
+
+    <!-- Setting language fragment -->
+    <string name="setting_language_title">Chọn ngôn ngữ</string>
 </resources>

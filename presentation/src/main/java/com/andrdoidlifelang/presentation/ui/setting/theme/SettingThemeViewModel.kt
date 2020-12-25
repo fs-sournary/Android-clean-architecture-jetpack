@@ -1,9 +1,7 @@
 package com.andrdoidlifelang.presentation.ui.setting.theme
 
-import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
@@ -18,7 +16,6 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 class SettingThemeViewModel @ViewModelInject constructor(
-    @Assisted private val savedStateHandle: SavedStateHandle,
     getAvailableThemesUseCase: GetAvailableThemesUseCase,
     getThemeUseCase: GetThemeUseCase,
     private val setThemeUseCase: SetThemeUseCase
