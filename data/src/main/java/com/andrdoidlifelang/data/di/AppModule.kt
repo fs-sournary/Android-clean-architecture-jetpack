@@ -7,21 +7,41 @@ import com.andrdoidlifelang.data.db.VideoDao
 import com.andrdoidlifelang.data.pref.AppPreference
 import com.andrdoidlifelang.data.pref.AppPreferenceImpl
 import com.andrdoidlifelang.data.util.Constant
+import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 import javax.inject.Singleton
 
 @InstallIn(ApplicationComponent::class)
 @Module
 object AppModule {
 
-    @Singleton
+    @FlowPreview
+    @ExperimentalCoroutinesApi
     @Provides
-    fun provideAppPreference(@ApplicationContext context: Context): AppPreference =
-        AppPreferenceImpl(context)
+    @Singleton
+    fun provideAppPreference(appPreferenceImpl: AppPreferenceImpl): AppPreference {
+        return appPreferenceImpl
+    }
+
+    @FlowPreview
+    @ExperimentalCoroutinesApi
+    @Provides
+    @Singleton
+    fun provideAppPreferenceImpl(@ApplicationContext context: Context, gson: Gson): AppPreferenceImpl {
+        return AppPreferenceImpl(context, gson)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGson(): Gson {
+        return Gson()
+    }
 
     @Singleton
     @Provides

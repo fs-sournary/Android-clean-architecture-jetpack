@@ -1,5 +1,6 @@
 package com.andrdoidlifelang.presentation.di
 
+import com.andrdoidlifelang.domain.repository.AuthRepository
 import com.andrdoidlifelang.domain.repository.MovieRepository
 import com.andrdoidlifelang.domain.repository.ThemeRepository
 import com.andrdoidlifelang.domain.usecase.GetAvailableThemesUseCase
@@ -11,6 +12,9 @@ import com.andrdoidlifelang.domain.usecase.GetThemeUseCase
 import com.andrdoidlifelang.domain.usecase.GetTopRateMovieUseCase
 import com.andrdoidlifelang.domain.usecase.GetUpcomingMovieUseCase
 import com.andrdoidlifelang.domain.usecase.SetThemeUseCase
+import com.andrdoidlifelang.domain.usecase.auth.CheckLoginUseCase
+import com.andrdoidlifelang.domain.usecase.auth.LoginUseCase
+import com.andrdoidlifelang.domain.usecase.auth.LogoutUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -74,4 +78,22 @@ object UseCaseModule {
     fun provideGetThemeObservableUseCase(
         themeRepository: ThemeRepository
     ): GetThemeObservableUseCase = GetThemeObservableUseCase(themeRepository)
+
+    @Singleton
+    @Provides
+    fun provideCheckLoginUseCase(
+        authRepository: AuthRepository
+    ): CheckLoginUseCase = CheckLoginUseCase(authRepository)
+
+    @Singleton
+    @Provides
+    fun provideLoginUseCase(
+        authRepository: AuthRepository
+    ): LoginUseCase = LoginUseCase(authRepository)
+
+    @Singleton
+    @Provides
+    fun provideLogoutUseCase(
+        authRepository: AuthRepository
+    ): LogoutUseCase = LogoutUseCase(authRepository)
 }

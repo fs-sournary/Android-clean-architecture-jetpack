@@ -1,20 +1,26 @@
 package com.andrdoidlifelang.presentation.ui
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.core.view.updatePadding
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.observe
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.andrdoidlifelang.presentation.R
 import com.andrdoidlifelang.presentation.databinding.ActivityMainBinding
 import com.andrdoidlifelang.presentation.databinding.NavDrawerHeaderBinding
 import com.andrdoidlifelang.presentation.ui.base.NavigationHostListener
+import com.andrdoidlifelang.presentation.ui.login.LoginActivity
 import com.andrdoidlifelang.presentation.util.Constant
 import com.andrdoidlifelang.presentation.util.EventObserver
 import com.andrdoidlifelang.presentation.widget.MovieHashTagItemDecoration
@@ -25,10 +31,17 @@ import com.androidlifelang.corepresentation.ext.shouldCloseFromBackPress
 import com.androidlifelang.corepresentation.ext.updateTheme
 import com.androidlifelang.corepresentation.ui.CoreActivity
 import com.androidlifelang.corepresentation.utils.EdgeToEdge
+import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
 
 @AndroidEntryPoint
-class MainActivity : CoreActivity<ActivityMainBinding, MainViewModel>(), NavigationHostListener {
+class MainActivity : CoreActivity<ActivityMainBinding, MainViewModel>(), NavigationHostListener, NavigationView.OnNavigationItemSelectedListener {
+
+    companion object {
+
+        fun getIntent(context: Context): Intent = Intent(context, MainActivity::class.java)
+    }
 
     private var currentNavId = Constant.NAV_ID_NONE
 
@@ -48,7 +61,17 @@ class MainActivity : CoreActivity<ActivityMainBinding, MainViewModel>(), Navigat
     }
 
     private fun observer() {
-        viewModel.theme.observe(this, EventObserver(::updateTheme))
+        with(viewModel) {
+            theme.observe(this@MainActivity, EventObserver(::updateTheme))
+
+            logoutEvent.observe(this@MainActivity) {
+                it.getContentIfNotHandled()?.let {
+
+                    finish()
+                    startActivity(LoginActivity.getIntent(this@MainActivity))
+                }
+            }
+        }
     }
 
     private fun setupWindow() {
@@ -99,6 +122,7 @@ class MainActivity : CoreActivity<ActivityMainBinding, MainViewModel>(), Navigat
             addHeaderView(navHeader)
             itemBackground = context.createNavigationDrawerItemBackground()
             setupWithNavController(navController)
+            setNavigationItemSelectedListener(this@MainActivity)
         }
     }
 
@@ -112,6 +136,18 @@ class MainActivity : CoreActivity<ActivityMainBinding, MainViewModel>(), Navigat
             binding.drawer.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
+        }
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+        R.id.logout_dest -> {
+            viewModel.logout()
+            true
+        }
+        else -> {
+            NavigationUI.onNavDestinationSelected(item, navController)
+            drawer?.closeDrawer(GravityCompat.START)
+            true
         }
     }
 }

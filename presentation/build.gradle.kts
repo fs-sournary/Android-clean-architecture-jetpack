@@ -99,6 +99,11 @@ dependencies {
     implementation(Lib.HILT_ANDROID_VIEWMODEL)
     kapt(Lib.HILT_ANDROID_COMPILER)
 
+    // Retrofit and net
+    implementation(Lib.OKHTTP_LOGGING_INTERCEPTOR)
+    implementation(Lib.RETROFIT_RUNTIME)
+    implementation(Lib.RETROFIT_GSON)
+
     // Firebase
     implementation(platform(Lib.FIREBASE_BOM))
     implementation(Lib.FIREBASE_ANALYTICS_KTX)

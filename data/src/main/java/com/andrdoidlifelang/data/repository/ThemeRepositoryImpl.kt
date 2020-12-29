@@ -6,11 +6,11 @@ import com.andrdoidlifelang.domain.model.Theme
 import com.andrdoidlifelang.domain.model.themeFromStorageKey
 import com.andrdoidlifelang.domain.repository.ThemeRepository
 import com.andrdoidlifelang.domain.repository.UseCaseResult
-import javax.inject.Inject
-import javax.inject.Singleton
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
+import javax.inject.Inject
+import javax.inject.Singleton
 
 @Singleton
 class ThemeRepositoryImpl @Inject constructor(private val appPreference: AppPreference) : ThemeRepository {

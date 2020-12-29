@@ -23,7 +23,9 @@ android {
         versionName = Version.VERSION_NAME
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-        buildConfigField("String", "API_KEY", getApiKey()["API_KEY"] as String)
+        buildConfigField("String", "BASE_URL", getConfig()["BASE_URL"] as String)
+        buildConfigField("String", "BASE_URL_AUTH", getConfig()["BASE_URL_AUTH"] as String)
+        buildConfigField("String", "API_KEY", getConfig()["API_KEY"] as String)
     }
     buildTypes {
         getByName("release") {
@@ -43,7 +45,7 @@ android {
     }
 }
 
-fun getApiKey(): Properties = Properties().apply {
+fun getConfig(): Properties = Properties().apply {
     load(FileInputStream(File("secrets.properties")))
 }
 

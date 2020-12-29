@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.updateLayoutParams
 import androidx.databinding.ViewDataBinding
-import androidx.lifecycle.ViewModel
 import com.andrdoidlifelang.presentation.R
 import com.androidlifelang.corepresentation.ext.autoClear
 import com.androidlifelang.corepresentation.ext.getSystemWindowInsetEdge
@@ -15,7 +14,7 @@ import com.androidlifelang.corepresentation.ext.getSystemWindowInsetEdge
 /**
  * Base class for fragments in main. This class handles setting up [Toolbar] with navigation icon.
  */
-abstract class BaseMainNavigationFragment<Binding : ViewDataBinding, VM : ViewModel> :
+abstract class BaseMainNavigationFragment<Binding : ViewDataBinding, VM : BaseViewModel> :
     BaseFragment<Binding, VM>() {
 
     private var navHostListener by autoClear<NavigationHostListener>()
