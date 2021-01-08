@@ -24,10 +24,13 @@ class AppPreferenceImpl(context: Context) : AppPreference {
     private val changeListener = OnSharedPreferenceChangeListener { _, key ->
         when (key) {
             Constant.PREF_DARK_MODE_ENABLE -> selectedTheme.offer(getTheme())
+            Constant.PREF_LANGUAGE -> selectLanguage.offer(getLanguage())
         }
     }
 
     private val selectedTheme = ConflatedBroadcastChannel<String>()
+
+    private val selectLanguage = ConflatedBroadcastChannel<String>()
 
     override fun setAccessToken(accessToken: String) {
         pref.edit { putString(Constant.ACCESS_TOKEN_KEY, accessToken) }
@@ -43,4 +46,13 @@ class AppPreferenceImpl(context: Context) : AppPreference {
     override fun getTheme(): String = pref.getString(Constant.PREF_DARK_MODE_ENABLE, null) ?: Theme.SYSTEM.storageKey
 
     override fun observableSelectedTheme(): Flow<String> = selectedTheme.asFlow()
+
+    override fun setLanguage(language: String) {
+        pref.edit { putString(Constant.PREF_LANGUAGE, language) }
+    }
+
+    override fun getLanguage(): String =
+        pref.getString(Constant.PREF_LANGUAGE, Constant.DEF_PREF_STRING) ?: Constant.DEF_PREF_STRING
+
+    override fun observableSelectLanguage(): Flow<String> = selectLanguage.asFlow()
 }

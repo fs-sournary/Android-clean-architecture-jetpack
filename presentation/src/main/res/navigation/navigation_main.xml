@@ -39,4 +39,10 @@
         android:id="@+id/setting_theme"
         android:name="com.andrdoidlifelang.presentation.ui.setting.theme.SettingThemeFragment"
         android:label="SettingThemeFragment" />
+
+    <dialog
+        android:id="@+id/setting_language"
+        android:name="com.andrdoidlifelang.presentation.ui.setting.language.SettingLanguageFragment"
+        android:label="SettingLanguageFragment"
+        tools:layout="@layout/dialog_setting_language" />
 </navigation>
